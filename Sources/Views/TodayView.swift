@@ -13,6 +13,7 @@ struct TodayView: View {
     @State private var showingHistory = false
     @State private var lowStockVitamins: [Vitamin] = []
     @State private var showingLowStock = false
+    @State private var lowStockDetectionFailed = false
     @State private var activeHint: SupplementInteraction?
     @State private var shownHintIds: Set<String> = []
 
@@ -130,12 +131,20 @@ struct TodayView: View {
         .padding(.top, 8)
     }
 
+    @ViewBuilder
     private var lowStockSection: some View {
-        VStack(spacing: 8) {
-            ForEach(lowStockVitamins.prefix(2)) { vitamin in
-                LowStockAlertCard(vitamin: vitamin) {
-                    selectedVitamin = vitamin
-                    showingLowStock = true
+        if lowStockDetectionFailed {
+            LowStockDetectionFailedView {
+                lowStockDetectionFailed = false
+                loadLowStock()
+            }
+        } else {
+            VStack(spacing: 8) {
+                ForEach(lowStockVitamins.prefix(2)) { vitamin in
+                    LowStockAlertCard(vitamin: vitamin) {
+                        selectedVitamin = vitamin
+                        showingLowStock = true
+                    }
                 }
             }
         }
@@ -195,9 +204,19 @@ struct TodayView: View {
             vitamins = try databaseService.fetchAllVitamins()
             let logs = try databaseService.fetchLogs(for: Date())
             todayLogs = Dictionary(uniqueKeysWithValues: logs.map { ($0.vitaminId, $0.taken) })
-            lowStockVitamins = try databaseService.getLowStockVitamins()
         } catch {
             print("Load error: \(error)")
+        }
+        loadLowStock()
+    }
+
+    private func loadLowStock() {
+        do {
+            lowStockVitamins = try databaseService.getLowStockVitamins()
+            lowStockDetectionFailed = false
+        } catch {
+            lowStockDetectionFailed = true
+            lowStockVitamins = []
         }
     }
 

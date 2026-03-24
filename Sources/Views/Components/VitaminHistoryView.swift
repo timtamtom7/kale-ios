@@ -69,6 +69,12 @@ struct VitaminHistoryView: View {
                         .font(.system(size: 12))
                         .foregroundColor(.textSecondary)
                 }
+                if let hist = history {
+                    let taken = Int(hist.consistency30Days * 30)
+                    Text("\(taken)/30 days this month")
+                        .font(.system(size: 12, weight: .medium))
+                        .foregroundColor(.accentGreen)
+                }
             }
             Spacer()
         }
@@ -95,12 +101,25 @@ struct VitaminHistoryView: View {
                 color: .accentWarm
             )
             StatCard(
+                title: "Current Streak",
+                value: "\(history?.currentStreak ?? 0)",
+                icon: "flame.fill",
+                color: streakColor
+            )
+            StatCard(
                 title: "Stock Left",
                 value: stockValue,
                 icon: "pills.fill",
                 color: stockColor
             )
         }
+    }
+
+    private var streakColor: Color {
+        let streak = history?.currentStreak ?? 0
+        if streak >= 7 { return .accentGreen }
+        if streak >= 3 { return .orange }
+        return .textSecondary
     }
 
     private var stockValue: String {

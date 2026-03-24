@@ -303,12 +303,50 @@ final class DatabaseService: ObservableObject {
 
         let consistency: Double = daysExpected > 0 ? Double(daysTaken) / Double(daysExpected) : 0.0
 
+        // Calculate current streak
+        let currentStreak = calculateCurrentStreak(vitaminId: vid, from: today)
+
         return VitaminHistory(
             vitaminId: vid,
             lastTakenDate: lastTakenDate,
             consistency30Days: consistency,
-            totalDaysTaken: totalDaysTaken
+            totalDaysTaken: totalDaysTaken,
+            currentStreak: currentStreak
         )
+    }
+
+    private func calculateCurrentStreak(vitaminId vid: Int64, from today: Date) -> Int {
+        guard let db = db else { return 0 }
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let calendar = Calendar.current
+
+        var streak = 0
+        let todayKey = formatter.string(from: today)
+
+        // Check if today is taken (start streak from today)
+        if let row = try? db.pluck(dailyLogs.filter(vitaminId == vid && dateKey == todayKey)),
+           let taken = try? row.get(taken), taken {
+            streak = 1
+        }
+
+        // Count consecutive days taken backwards from today/yesterday
+        var currentDate = calendar.date(byAdding: .day, value: -1, to: today)!
+        let startDate = calendar.date(byAdding: .day, value: -365, to: today)!
+
+        while currentDate >= startDate {
+            let key = formatter.string(from: currentDate)
+            if let row = try? db.pluck(dailyLogs.filter(vitaminId == vid && dateKey == key)),
+               let taken = try? row.get(taken), taken {
+                streak += 1
+                currentDate = calendar.date(byAdding: .day, value: -1, to: currentDate)!
+            } else {
+                break
+            }
+        }
+
+        return streak
     }
 
     func getLowStockVitamins() throws -> [Vitamin] {
@@ -359,6 +397,7 @@ struct VitaminHistory {
     var lastTakenDate: Date?
     var consistency30Days: Double
     var totalDaysTaken: Int
+    var currentStreak: Int
 }
 
 enum DayStatus {

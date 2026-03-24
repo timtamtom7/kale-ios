@@ -8,6 +8,8 @@ struct MonthlyView: View {
     @State private var selectedDayDate: Date?
     @State private var showingDayDetail = false
     @State private var consistencyScore: Double = 0
+    @State private var calendarDataMissing = false
+    @State private var loadErrorMessage = ""
 
     private let calendar = Calendar.current
     private let columns = Array(repeating: GridItem(.flexible(), spacing: 4), count: 7)
@@ -19,6 +21,12 @@ struct MonthlyView: View {
 
                 ScrollView {
                     VStack(spacing: 24) {
+                        if calendarDataMissing {
+                            CalendarDataMissingView(date: currentMonth) {
+                                loadMonthData()
+                            }
+                        }
+
                         scoreCard
                         monthCalendar
                         dayLabels
@@ -185,8 +193,11 @@ struct MonthlyView: View {
             }
 
             consistencyScore = try databaseService.getConsistencyScore(forMonth: currentMonth)
+            calendarDataMissing = false
         } catch {
             print("Load month error: \(error)")
+            calendarDataMissing = true
+            loadErrorMessage = "Couldn't load calendar data. Pull to retry."
         }
     }
 

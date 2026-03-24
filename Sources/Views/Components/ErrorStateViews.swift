@@ -390,20 +390,36 @@ struct ScanOverlayView: View {
 
 struct CalendarDataMissingView: View {
     let date: Date
+    var onRetry: (() -> Void)? = nil
+
     var body: some View {
         VStack(spacing: 12) {
             Image(systemName: "calendar.badge.exclamationmark")
                 .font(.system(size: 32))
                 .foregroundColor(.textSecondary)
 
-            Text("No data for this date")
+            Text("Couldn't load calendar data")
                 .font(.system(size: 14, weight: .medium))
                 .foregroundColor(.textPrimary)
 
-            Text("Tracking data for this day is not available.")
+            Text("There was a problem loading your tracking data for this month.")
                 .font(.system(size: 12))
                 .foregroundColor(.textSecondary)
                 .multilineTextAlignment(.center)
+
+            if onRetry != nil {
+                Button {
+                    onRetry?()
+                } label: {
+                    HStack(spacing: 4) {
+                        Image(systemName: "arrow.clockwise")
+                        Text("Retry")
+                    }
+                    .font(.system(size: 12, weight: .medium))
+                    .foregroundColor(.accentGreen)
+                }
+                .padding(.top, 4)
+            }
         }
         .padding(24)
         .frame(maxWidth: .infinity)
