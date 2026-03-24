@@ -24,6 +24,10 @@
     <true/>
     <key>NSCameraUsageDescription</key>
     <string>Kale uses your camera to scan supplement barcodes for easy tracking.</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>Kale can sync your vitamin reminders with your calendar and detect when you're traveling to skip reminders.</string>
+    <key>NSCalendarsFullAccessUsageDescription</key>
+    <string>Kale can sync your vitamin reminders with your calendar and detect when you're traveling to skip reminders.</string>
     <key>UIApplicationSceneManifest</key>
     <dict>
         <key>UIApplicationSupportsMultipleScenes</key>

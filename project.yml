@@ -25,6 +25,8 @@ targets:
     platform: iOS
     sources:
       - path: Sources
+        excludes:
+          - "Widgets/**"
     resources:
       - path: Sources/Resources
         excludes:
@@ -40,10 +42,36 @@ targets:
     dependencies:
       - package: SQLite
         product: SQLite
+      - framework: EventKit.framework
+        embed: false
     entitlements:
       path: Sources/Resources/Kale.entitlements
       properties:
         aps-environment: development
+        com.apple.security.application-groups:
+          - group.com.kale.app
+
+  KaleWidget:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: Sources/Widgets
+    settings:
+      base:
+        INFOPLIST_FILE: Sources/Widgets/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.kale.app.widget
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SKIP_INSTALL: "YES"
+        ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME: WidgetBackground
+        CODE_SIGN_ENTITLEMENTS: Sources/Widgets/KaleWidget.entitlements
+    dependencies:
+      - target: Kale
+        embed: false
+    entitlements:
+      path: Sources/Widgets/KaleWidget.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.kale.app
 
   KaleTests:
     type: bundle.unit-test

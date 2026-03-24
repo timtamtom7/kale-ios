@@ -1,4 +1,5 @@
 import SwiftUI
+import WidgetKit
 
 struct TodayView: View {
     @EnvironmentObject var databaseService: DatabaseService
@@ -16,6 +17,7 @@ struct TodayView: View {
     @State private var lowStockDetectionFailed = false
     @State private var activeHint: SupplementInteraction?
     @State private var shownHintIds: Set<String> = []
+    @State private var showingFamilyView = false
 
     var body: some View {
         NavigationStack {
@@ -86,6 +88,14 @@ struct TodayView: View {
                                 .font(.system(size: 16))
                                 .foregroundColor(.yellow)
                         }
+
+                        Button {
+                            showingFamilyView = true
+                        } label: {
+                            Image(systemName: "person.3.fill")
+                                .font(.system(size: 16))
+                                .foregroundColor(.accentGreen)
+                        }
                     }
                 }
             }
@@ -104,6 +114,9 @@ struct TodayView: View {
                 if let vitamin = selectedVitamin {
                     VitaminHistoryView(vitamin: vitamin)
                 }
+            }
+            .sheet(isPresented: $showingFamilyView) {
+                FamilyManagementView()
             }
             .onAppear {
                 loadData()
@@ -239,6 +252,9 @@ struct TodayView: View {
             try databaseService.logTaken(vitaminId: vid, date: Date(), taken: newState)
             todayLogs[vid] = newState
 
+            // Update widget
+            updateWidgetData()
+
             // Decrement stock when taken
             if newState && vitamin.stockCount != nil {
                 try databaseService.decrementStock(for: vitamin)
@@ -253,6 +269,14 @@ struct TodayView: View {
         } catch {
             print("Toggle error: \(error)")
         }
+    }
+
+    private func updateWidgetData() {
+        let todayDate = Calendar.current.startOfDay(for: Date())
+        let logs = todayLogs.map { (vid, taken) -> DailyLog in
+            DailyLog(id: nil, vitaminId: vid, date: todayDate, taken: taken, takenAt: taken ? Date() : nil)
+        }
+        WidgetUpdater.shared.refreshWidget(vitamins: vitamins, todayLogs: logs)
     }
 }
 

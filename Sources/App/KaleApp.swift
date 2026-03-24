@@ -4,6 +4,8 @@ import SwiftUI
 struct KaleApp: App {
     @StateObject private var databaseService = DatabaseService.shared
     @StateObject private var notificationService = NotificationService.shared
+    @StateObject private var calendarService = CalendarService.shared
+    @StateObject private var familyService = FamilyService.shared
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
 
     var body: some Scene {
@@ -12,12 +14,16 @@ struct KaleApp: App {
                 MainTabView()
                     .environmentObject(databaseService)
                     .environmentObject(notificationService)
+                    .environmentObject(calendarService)
+                    .environmentObject(familyService)
             } else {
                 OnboardingView(onComplete: {
                     hasCompletedOnboarding = true
                 })
                 .environmentObject(databaseService)
                 .environmentObject(notificationService)
+                .environmentObject(calendarService)
+                .environmentObject(familyService)
             }
         }
     }
