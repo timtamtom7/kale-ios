@@ -22,12 +22,15 @@
 		5C505A971A0B1B7C2507BCFB /* PricingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA168765C2B22C19C1257F3F /* PricingView.swift */; };
 		6845A7919A3AD4B5EF2C328A /* BarcodeDatabase.json in Resources */ = {isa = PBXBuildFile; fileRef = CE5962FB7D5DDE73CD9336EC /* BarcodeDatabase.json */; };
 		6CAB1696B44A6D8A15EA2CD0 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DCF100EC88ACDA67078D7C /* EventKit.framework */; };
+		6E1922D2700EF88EF8F57F3A /* HealthInsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BBD1DA6B963CF3454A7DA /* HealthInsightsView.swift */; };
 		7FE3CCD0ECC9389DF3160D6D /* FamilyComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07F5DADA3DDB5F5A44367EF /* FamilyComparisonView.swift */; };
 		80CFB490DA55AE3A7D714BAB /* KaleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EC4AB6B19E4CA6D2590EE7 /* KaleApp.swift */; };
 		87F31DD5E31AF8DDABF39B94 /* WidgetDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF79BF830187B3A3DD5DC2C3 /* WidgetDataService.swift */; };
 		9665DE79F1C787F3F5AB2533 /* ErrorStateViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BA85C371BC82EF87930180 /* ErrorStateViews.swift */; };
+		98A2153FE406ED6FA700F371 /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF97241F7346EBD55F95FC0 /* SubscriptionManager.swift */; };
 		99DC0EC08288505DAF646A1B /* KaleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC061D59370BB7DD44D78B6 /* KaleWidget.swift */; };
 		9DBBB1602FE844F284B9126E /* VitaminCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C4F9331E9675687551D4DB /* VitaminCard.swift */; };
+		A32CCE2BBDAF05CD6AFA097E /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08328FB908B5E5A24FCD2AC0 /* CommunityView.swift */; };
 		A6905A3878AE27ED7EB8B15D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75E6F605B0BEDBACDBDD565 /* OnboardingView.swift */; };
 		A96776594D7A375B4AF78333 /* BarcodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BA6E2EF7E97BC859B16757 /* BarcodeService.swift */; };
 		BA4185F61B0D05C4480B63CB /* MonthlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E69B74C6B1770D6CE70C8A /* MonthlyView.swift */; };
@@ -38,6 +41,8 @@
 		EAA887D28376EF76D260024D /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF98F8A31C266323583A41 /* CalendarService.swift */; };
 		EC15FF474779126ACE75481D /* KaleWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CCBA62A26FD8BD739DAE0F /* KaleWidgetBundle.swift */; };
 		F4E5C029063A3BF1DB6786DA /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA64560B0286C658EFB62FA9 /* ColorExtensions.swift */; };
+		F7CAF5D504DD280FB455C4CD /* HealthInsightsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15F7865D55A1A3D9133B563 /* HealthInsightsService.swift */; };
+		F8A5695AE949E0F3F79806A9 /* CommunityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CF8E47C17E679E71B3BA7 /* CommunityService.swift */; };
 		FAF92B260D9F379C71C9D150 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C16DA190DDDBC9A2045C6 /* SettingsView.swift */; };
 		FBC8F53059EA91F362503482 /* LowStockAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A44B266C0F83E6DD1FDBB39 /* LowStockAlertView.swift */; };
 		FC5A89CBC3145AB1A19D513E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DC678177BD5FDEAEADB761F /* Assets.xcassets */; };
@@ -64,6 +69,7 @@
 /* Begin PBXFileReference section */
 		02DCF100EC88ACDA67078D7C /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EventKit.framework; sourceTree = "<group>"; };
 		073247B7C18866170D14B6EF /* Vitamin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vitamin.swift; sourceTree = "<group>"; };
+		08328FB908B5E5A24FCD2AC0 /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
 		09671F9B108BE37E8F9EA81B /* DailyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLog.swift; sourceTree = "<group>"; };
 		19BA6E2EF7E97BC859B16757 /* BarcodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeService.swift; sourceTree = "<group>"; };
 		19E69B74C6B1770D6CE70C8A /* MonthlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyView.swift; sourceTree = "<group>"; };
@@ -83,13 +89,16 @@
 		64EC4AB6B19E4CA6D2590EE7 /* KaleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleApp.swift; sourceTree = "<group>"; };
 		679ABDAE75B1BE836AD2CF93 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		6C28C4DB62AAEDE752BE866C /* InteractionHints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionHints.swift; sourceTree = "<group>"; };
+		6CF97241F7346EBD55F95FC0 /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
 		6D020778B3A2ABBA8A450B96 /* SharedComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedComponents.swift; sourceTree = "<group>"; };
 		710C16DA190DDDBC9A2045C6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7241BE14F284A495E0D7AA64 /* FamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMember.swift; sourceTree = "<group>"; };
 		7653916B07A8E9A6E69229C0 /* KaleWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KaleWidget.entitlements; sourceTree = "<group>"; };
 		77CAA1517857CBA0C8E4E43E /* AppStoreContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreContent.swift; sourceTree = "<group>"; };
+		786BBD1DA6B963CF3454A7DA /* HealthInsightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthInsightsView.swift; sourceTree = "<group>"; };
 		82DF98F8A31C266323583A41 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
 		841F3497490BF34D79E0C950 /* Kale.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kale.entitlements; sourceTree = "<group>"; };
+		848CF8E47C17E679E71B3BA7 /* CommunityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityService.swift; sourceTree = "<group>"; };
 		99CCBA62A26FD8BD739DAE0F /* KaleWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleWidgetBundle.swift; sourceTree = "<group>"; };
 		9B4D13F1230773B4929BFA20 /* Kale.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Kale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C4F9331E9675687551D4DB /* VitaminCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminCard.swift; sourceTree = "<group>"; };
@@ -100,6 +109,7 @@
 		CB3B4469FA47726D2B49405C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CE5962FB7D5DDE73CD9336EC /* BarcodeDatabase.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BarcodeDatabase.json; sourceTree = "<group>"; };
 		CF1341227DFA5E5D0F87DBDB /* KaleTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = KaleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D15F7865D55A1A3D9133B563 /* HealthInsightsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthInsightsService.swift; sourceTree = "<group>"; };
 		DF79BF830187B3A3DD5DC2C3 /* WidgetDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDataService.swift; sourceTree = "<group>"; };
 		E07F5DADA3DDB5F5A44367EF /* FamilyComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyComparisonView.swift; sourceTree = "<group>"; };
 		E80EC5A66D727A7DCD84C9C6 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
@@ -222,9 +232,12 @@
 			children = (
 				19BA6E2EF7E97BC859B16757 /* BarcodeService.swift */,
 				82DF98F8A31C266323583A41 /* CalendarService.swift */,
+				848CF8E47C17E679E71B3BA7 /* CommunityService.swift */,
 				E80EC5A66D727A7DCD84C9C6 /* DatabaseService.swift */,
 				2C3981A744BBA7EF18945EBB /* FamilyService.swift */,
+				D15F7865D55A1A3D9133B563 /* HealthInsightsService.swift */,
 				679ABDAE75B1BE836AD2CF93 /* NotificationService.swift */,
+				6CF97241F7346EBD55F95FC0 /* SubscriptionManager.swift */,
 				DF79BF830187B3A3DD5DC2C3 /* WidgetDataService.swift */,
 			);
 			path = Services;
@@ -234,6 +247,8 @@
 			isa = PBXGroup;
 			children = (
 				5947751A8E3891760751F69D /* AddVitaminView.swift */,
+				08328FB908B5E5A24FCD2AC0 /* CommunityView.swift */,
+				786BBD1DA6B963CF3454A7DA /* HealthInsightsView.swift */,
 				19E69B74C6B1770D6CE70C8A /* MonthlyView.swift */,
 				710C16DA190DDDBC9A2045C6 /* SettingsView.swift */,
 				5231358D43AE5A2BAD452473 /* TodayView.swift */,
@@ -402,6 +417,8 @@
 				A96776594D7A375B4AF78333 /* BarcodeService.swift in Sources */,
 				EAA887D28376EF76D260024D /* CalendarService.swift in Sources */,
 				F4E5C029063A3BF1DB6786DA /* ColorExtensions.swift in Sources */,
+				F8A5695AE949E0F3F79806A9 /* CommunityService.swift in Sources */,
+				A32CCE2BBDAF05CD6AFA097E /* CommunityView.swift in Sources */,
 				3D669CD0099F8B805BB39FD7 /* ContentView.swift in Sources */,
 				45B43B9576926456A4275FC9 /* DailyLog.swift in Sources */,
 				39E4A9270F3B85AC15A639B3 /* DatabaseService.swift in Sources */,
@@ -410,6 +427,8 @@
 				FC6A955C730D9810C3B21240 /* FamilyManagementView.swift in Sources */,
 				BDD58ED920CE154CCEA7AB4D /* FamilyMember.swift in Sources */,
 				CB255028FDEE13AD1156619B /* FamilyService.swift in Sources */,
+				F7CAF5D504DD280FB455C4CD /* HealthInsightsService.swift in Sources */,
+				6E1922D2700EF88EF8F57F3A /* HealthInsightsView.swift in Sources */,
 				48A3253748DC3B886AAE7BAB /* InteractionHintToast.swift in Sources */,
 				3C9E0458ADEE15BB65B66191 /* InteractionHints.swift in Sources */,
 				80CFB490DA55AE3A7D714BAB /* KaleApp.swift in Sources */,
@@ -420,6 +439,7 @@
 				5C505A971A0B1B7C2507BCFB /* PricingView.swift in Sources */,
 				FAF92B260D9F379C71C9D150 /* SettingsView.swift in Sources */,
 				3092B276A83F2A4641CDB4B7 /* SharedComponents.swift in Sources */,
+				98A2153FE406ED6FA700F371 /* SubscriptionManager.swift in Sources */,
 				0B91FF992108FBF8F286E434 /* TodayView.swift in Sources */,
 				188C1F3E76311711E97CC41D /* Vitamin.swift in Sources */,
 				9DBBB1602FE844F284B9126E /* VitaminCard.swift in Sources */,

@@ -4,6 +4,7 @@ import AVFoundation
 struct AddVitaminView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var databaseService: DatabaseService
+    @EnvironmentObject var subscriptionManager: SubscriptionManager
     @State private var vitaminName = ""
     @State private var dosage = ""
     @State private var pillEmoji = "💊"
@@ -16,8 +17,19 @@ struct AddVitaminView: View {
     @State private var scanAttempts = 0
     @State private var stockCountText = ""
     @State private var dailyDoseText = "1"
+    @State private var currentVitaminCount = 0
+    @State private var showingLimitReached = false
+    @State private var showingUpgradePrompt = false
 
     var onSave: ((Vitamin) -> Void)?
+
+    private var canAddVitamin: Bool {
+        subscriptionManager.canAccess(.unlimitedVitamins) || currentVitaminCount < 3
+    }
+
+    private var canUseBarcode: Bool {
+        subscriptionManager.canAccess(.barcodeScanning)
+    }
 
     private let pillEmojis = ["💊", "🫙", "💉", "🥤", "🍬", "🧪", "💧", "🌿", "🥛", "🍀", "🥜", "🐟"]
 
@@ -67,6 +79,15 @@ struct AddVitaminView: View {
             }
             .onAppear {
                 checkCameraPermission()
+                loadVitaminCount()
+            }
+            .alert("Vitamin Limit Reached", isPresented: $showingLimitReached) {
+                Button("Cancel", role: .cancel) {}
+                Button("Upgrade") {
+                    showingUpgradePrompt = true
+                }
+            } message: {
+                Text("Free plan supports up to 3 vitamins. Upgrade to Daily or Complete for unlimited vitamins.")
             }
         }
     }
@@ -80,6 +101,15 @@ struct AddVitaminView: View {
                     cameraPermissionStatus = granted ? .authorized : .denied
                 }
             }
+        }
+    }
+
+    private func loadVitaminCount() {
+        do {
+            let vitamins = try databaseService.fetchAllVitamins()
+            currentVitaminCount = vitamins.count
+        } catch {
+            print("Load vitamin count error: \(error)")
         }
     }
 
@@ -209,23 +239,44 @@ struct AddVitaminView: View {
 
     private var saveButton: some View {
         Button {
-            saveVitamin()
+            if !canAddVitamin {
+                showingLimitReached = true
+            } else {
+                saveVitamin()
+            }
         } label: {
-            Text("Save Vitamin")
-                .font(.system(size: 16, weight: .semibold))
-                .foregroundColor(.white)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 16)
-                .background(
-                    RoundedRectangle(cornerRadius: 14)
-                        .fill(Color.accentGreen)
-                )
+            VStack(spacing: 4) {
+                Text("Save Vitamin")
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundColor(.white)
+                if !subscriptionManager.canAccess(.unlimitedVitamins) && currentVitaminCount >= 2 {
+                    Text("\(3 - currentVitaminCount) slot left")
+                        .font(.system(size: 10))
+                        .foregroundColor(.white.opacity(0.8))
+                }
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 16)
+            .background(
+                RoundedRectangle(cornerRadius: 14)
+                    .fill(Color.accentGreen)
+            )
         }
         .disabled(vitaminName.isEmpty || dosage.isEmpty)
         .opacity(vitaminName.isEmpty || dosage.isEmpty ? 0.5 : 1)
     }
 
     private func handleBarcode(_ code: String) {
+        if !canAddVitamin {
+            showingLimitReached = true
+            return
+        }
+
+        if !canUseBarcode {
+            showingUpgradePrompt = true
+            return
+        }
+
         scannedBarcode = code
         showingScanner = false
 
