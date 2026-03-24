@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		01D7755129FD1A0411608CD8 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679ABDAE75B1BE836AD2CF93 /* NotificationService.swift */; };
 		0B91FF992108FBF8F286E434 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5231358D43AE5A2BAD452473 /* TodayView.swift */; };
+		150F5F87D1A7F8B4D8AB23EE /* VitaminHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BE344194ED5DAC0AB09B0B /* VitaminHistoryView.swift */; };
 		188C1F3E76311711E97CC41D /* Vitamin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073247B7C18866170D14B6EF /* Vitamin.swift */; };
 		19A86739BBAF37B4EFAC0162 /* AppStoreContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CAA1517857CBA0C8E4E43E /* AppStoreContent.swift */; };
 		2213E524715718B3E98EDA1F /* KaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497F4E3F0DAC04B5FF86B8D /* KaleTests.swift */; };
 		3092B276A83F2A4641CDB4B7 /* SharedComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D020778B3A2ABBA8A450B96 /* SharedComponents.swift */; };
 		39E4A9270F3B85AC15A639B3 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80EC5A66D727A7DCD84C9C6 /* DatabaseService.swift */; };
+		3C9E0458ADEE15BB65B66191 /* InteractionHints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C28C4DB62AAEDE752BE866C /* InteractionHints.swift */; };
 		3D669CD0099F8B805BB39FD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D17498D844C152870E6895 /* ContentView.swift */; };
 		45B43B9576926456A4275FC9 /* DailyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09671F9B108BE37E8F9EA81B /* DailyLog.swift */; };
+		48A3253748DC3B886AAE7BAB /* InteractionHintToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572970EA27E5F51978200D /* InteractionHintToast.swift */; };
 		5C505A971A0B1B7C2507BCFB /* PricingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA168765C2B22C19C1257F3F /* PricingView.swift */; };
 		6845A7919A3AD4B5EF2C328A /* BarcodeDatabase.json in Resources */ = {isa = PBXBuildFile; fileRef = CE5962FB7D5DDE73CD9336EC /* BarcodeDatabase.json */; };
 		80CFB490DA55AE3A7D714BAB /* KaleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EC4AB6B19E4CA6D2590EE7 /* KaleApp.swift */; };
@@ -28,6 +31,7 @@
 		E0355A6B4C9DBEF1E3F1F453 /* AddVitaminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5947751A8E3891760751F69D /* AddVitaminView.swift */; };
 		F4E5C029063A3BF1DB6786DA /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA64560B0286C658EFB62FA9 /* ColorExtensions.swift */; };
 		FAF92B260D9F379C71C9D150 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C16DA190DDDBC9A2045C6 /* SettingsView.swift */; };
+		FBC8F53059EA91F362503482 /* LowStockAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A44B266C0F83E6DD1FDBB39 /* LowStockAlertView.swift */; };
 		FC5A89CBC3145AB1A19D513E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DC678177BD5FDEAEADB761F /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -50,11 +54,14 @@
 		32BA85C371BC82EF87930180 /* ErrorStateViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateViews.swift; sourceTree = "<group>"; };
 		362C4223596FCC9169AF058E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3DC678177BD5FDEAEADB761F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40572970EA27E5F51978200D /* InteractionHintToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionHintToast.swift; sourceTree = "<group>"; };
+		4A44B266C0F83E6DD1FDBB39 /* LowStockAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowStockAlertView.swift; sourceTree = "<group>"; };
 		5231358D43AE5A2BAD452473 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		52D17498D844C152870E6895 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5947751A8E3891760751F69D /* AddVitaminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVitaminView.swift; sourceTree = "<group>"; };
 		64EC4AB6B19E4CA6D2590EE7 /* KaleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleApp.swift; sourceTree = "<group>"; };
 		679ABDAE75B1BE836AD2CF93 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		6C28C4DB62AAEDE752BE866C /* InteractionHints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionHints.swift; sourceTree = "<group>"; };
 		6D020778B3A2ABBA8A450B96 /* SharedComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedComponents.swift; sourceTree = "<group>"; };
 		710C16DA190DDDBC9A2045C6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		77CAA1517857CBA0C8E4E43E /* AppStoreContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreContent.swift; sourceTree = "<group>"; };
@@ -68,6 +75,7 @@
 		CE5962FB7D5DDE73CD9336EC /* BarcodeDatabase.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BarcodeDatabase.json; sourceTree = "<group>"; };
 		CF1341227DFA5E5D0F87DBDB /* KaleTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = KaleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E80EC5A66D727A7DCD84C9C6 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		F5BE344194ED5DAC0AB09B0B /* VitaminHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminHistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +121,11 @@
 			isa = PBXGroup;
 			children = (
 				32BA85C371BC82EF87930180 /* ErrorStateViews.swift */,
+				40572970EA27E5F51978200D /* InteractionHintToast.swift */,
+				4A44B266C0F83E6DD1FDBB39 /* LowStockAlertView.swift */,
 				6D020778B3A2ABBA8A450B96 /* SharedComponents.swift */,
 				A1C4F9331E9675687551D4DB /* VitaminCard.swift */,
+				F5BE344194ED5DAC0AB09B0B /* VitaminHistoryView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -153,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				09671F9B108BE37E8F9EA81B /* DailyLog.swift */,
+				6C28C4DB62AAEDE752BE866C /* InteractionHints.swift */,
 				073247B7C18866170D14B6EF /* Vitamin.swift */,
 			);
 			path = Models;
@@ -314,7 +326,10 @@
 				45B43B9576926456A4275FC9 /* DailyLog.swift in Sources */,
 				39E4A9270F3B85AC15A639B3 /* DatabaseService.swift in Sources */,
 				9665DE79F1C787F3F5AB2533 /* ErrorStateViews.swift in Sources */,
+				48A3253748DC3B886AAE7BAB /* InteractionHintToast.swift in Sources */,
+				3C9E0458ADEE15BB65B66191 /* InteractionHints.swift in Sources */,
 				80CFB490DA55AE3A7D714BAB /* KaleApp.swift in Sources */,
+				FBC8F53059EA91F362503482 /* LowStockAlertView.swift in Sources */,
 				BA4185F61B0D05C4480B63CB /* MonthlyView.swift in Sources */,
 				01D7755129FD1A0411608CD8 /* NotificationService.swift in Sources */,
 				A6905A3878AE27ED7EB8B15D /* OnboardingView.swift in Sources */,
@@ -324,6 +339,7 @@
 				0B91FF992108FBF8F286E434 /* TodayView.swift in Sources */,
 				188C1F3E76311711E97CC41D /* Vitamin.swift in Sources */,
 				9DBBB1602FE844F284B9126E /* VitaminCard.swift in Sources */,
+				150F5F87D1A7F8B4D8AB23EE /* VitaminHistoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

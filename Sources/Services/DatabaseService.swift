@@ -18,6 +18,8 @@ final class DatabaseService: ObservableObject {
     private let pillEmoji = SQLite.Expression<String>("pill_emoji")
     private let reminderTime = SQLite.Expression<Date>("reminder_time")
     private let createdAt = SQLite.Expression<Date>("created_at")
+    private let stockCount = SQLite.Expression<Int?>("stock_count")
+    private let dailyDose = SQLite.Expression<Int>("daily_dose")
 
     // DailyLog columns
     private let logId = SQLite.Expression<Int64>("id")
@@ -50,6 +52,8 @@ final class DatabaseService: ObservableObject {
             t.column(pillEmoji)
             t.column(reminderTime)
             t.column(createdAt)
+            t.column(stockCount)
+            t.column(dailyDose, defaultValue: 1)
         })
 
         try db?.run(dailyLogs.create(ifNotExists: true) { t in
@@ -75,7 +79,9 @@ final class DatabaseService: ObservableObject {
             barcode <- vitamin.barcode,
             pillEmoji <- vitamin.pillEmoji,
             reminderTime <- vitamin.reminderTime,
-            createdAt <- vitamin.createdAt
+            createdAt <- vitamin.createdAt,
+            stockCount <- vitamin.stockCount,
+            dailyDose <- vitamin.dailyDose
         )
         return try db.run(insert)
     }
@@ -92,7 +98,9 @@ final class DatabaseService: ObservableObject {
                 barcode: row[barcode],
                 pillEmoji: row[pillEmoji],
                 reminderTime: row[reminderTime],
-                createdAt: row[createdAt]
+                createdAt: row[createdAt],
+                stockCount: row[stockCount],
+                dailyDose: row[dailyDose]
             )
             result.append(v)
         }
@@ -112,7 +120,9 @@ final class DatabaseService: ObservableObject {
             name <- vitamin.name,
             dosage <- vitamin.dosage,
             pillEmoji <- vitamin.pillEmoji,
-            reminderTime <- vitamin.reminderTime
+            reminderTime <- vitamin.reminderTime,
+            stockCount <- vitamin.stockCount,
+            dailyDose <- vitamin.dailyDose
         ))
     }
 
@@ -256,6 +266,99 @@ final class DatabaseService: ObservableObject {
         if takenCount == allVitamins.count { return .complete }
         return .partial
     }
+
+    // MARK: - Vitamin History
+
+    func getVitaminHistory(vitaminId vid: Int64) throws -> VitaminHistory {
+        guard let db = db else { throw DatabaseError.connectionFailed }
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+
+        let today = Calendar.current.startOfDay(for: Date())
+        var thirtyDaysAgo = Calendar.current.date(byAdding: .day, value: -30, to: today)!
+
+        var lastTakenDate: Date?
+        var daysTaken = 0
+        var daysExpected = 0
+
+        let allLogs = try db.prepare(dailyLogs.filter(vitaminId == vid).order(dateKey.desc))
+
+        for row in allLogs {
+            guard let logDate = formatter.date(from: row[dateKey]) else { continue }
+            if lastTakenDate == nil && row[taken] {
+                lastTakenDate = logDate
+            }
+            if logDate >= thirtyDaysAgo && logDate <= today {
+                daysExpected += 1
+                if row[taken] { daysTaken += 1 }
+            }
+        }
+
+        // Total days taken ever
+        var totalDaysTaken = 0
+        for row in try db.prepare(dailyLogs.filter(vitaminId == vid && taken == true)) {
+            totalDaysTaken += 1
+        }
+
+        let consistency: Double = daysExpected > 0 ? Double(daysTaken) / Double(daysExpected) : 0.0
+
+        return VitaminHistory(
+            vitaminId: vid,
+            lastTakenDate: lastTakenDate,
+            consistency30Days: consistency,
+            totalDaysTaken: totalDaysTaken
+        )
+    }
+
+    func getLowStockVitamins() throws -> [Vitamin] {
+        let allVitamins = try fetchAllVitamins()
+        return allVitamins.filter { vitamin in
+            guard let stock = vitamin.stockCount, stock > 0 else { return false }
+            let estimatedDays = stock / max(vitamin.dailyDose, 1)
+            return estimatedDays <= 7
+        }
+    }
+
+    func decrementStock(for vitamin: Vitamin) throws {
+        guard let vid = vitamin.id, var stock = vitamin.stockCount else { return }
+        stock = max(0, stock - vitamin.dailyDose)
+        let updated = Vitamin(
+            id: vitamin.id,
+            name: vitamin.name,
+            dosage: vitamin.dosage,
+            barcode: vitamin.barcode,
+            pillEmoji: vitamin.pillEmoji,
+            reminderTime: vitamin.reminderTime,
+            createdAt: vitamin.createdAt,
+            stockCount: stock,
+            dailyDose: vitamin.dailyDose
+        )
+        try updateVitamin(updated)
+    }
+
+    func updateStock(for vitamin: Vitamin, count: Int) throws {
+        guard let vid = vitamin.id else { return }
+        let updated = Vitamin(
+            id: vitamin.id,
+            name: vitamin.name,
+            dosage: vitamin.dosage,
+            barcode: vitamin.barcode,
+            pillEmoji: vitamin.pillEmoji,
+            reminderTime: vitamin.reminderTime,
+            createdAt: vitamin.createdAt,
+            stockCount: count,
+            dailyDose: vitamin.dailyDose
+        )
+        try updateVitamin(updated)
+    }
+}
+
+struct VitaminHistory {
+    var vitaminId: Int64
+    var lastTakenDate: Date?
+    var consistency30Days: Double
+    var totalDaysTaken: Int
 }
 
 enum DayStatus {

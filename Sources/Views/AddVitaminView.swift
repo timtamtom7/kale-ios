@@ -14,6 +14,8 @@ struct AddVitaminView: View {
     @State private var cameraPermissionStatus: AVAuthorizationStatus = .notDetermined
     @State private var scanFailed = false
     @State private var scanAttempts = 0
+    @State private var stockCountText = ""
+    @State private var dailyDoseText = "1"
 
     var onSave: ((Vitamin) -> Void)?
 
@@ -146,6 +148,32 @@ struct AddVitaminView: View {
                     .cornerRadius(12)
             }
 
+            HStack(spacing: 12) {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Capsules in stock")
+                        .font(.system(size: 13, weight: .medium))
+                        .foregroundColor(.textSecondary)
+                    TextField("e.g. 60", text: $stockCountText)
+                        .font(.system(size: 15))
+                        .keyboardType(.numberPad)
+                        .padding(12)
+                        .background(Color.surfaceLight)
+                        .cornerRadius(12)
+                }
+
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Daily capsules")
+                        .font(.system(size: 13, weight: .medium))
+                        .foregroundColor(.textSecondary)
+                    TextField("1", text: $dailyDoseText)
+                        .font(.system(size: 15))
+                        .keyboardType(.numberPad)
+                        .padding(12)
+                        .background(Color.surfaceLight)
+                        .cornerRadius(12)
+                }
+            }
+
             if let barcode = scannedBarcode {
                 HStack {
                     Image(systemName: "barcode")
@@ -214,7 +242,9 @@ struct AddVitaminView: View {
             dosage: dosage,
             barcode: scannedBarcode,
             pillEmoji: pillEmoji,
-            reminderTime: reminderTime
+            reminderTime: reminderTime,
+            stockCount: Int(stockCountText),
+            dailyDose: Int(dailyDoseText) ?? 1
         )
 
         do {

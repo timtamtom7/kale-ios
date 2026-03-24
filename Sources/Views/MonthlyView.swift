@@ -50,8 +50,8 @@ struct MonthlyView: View {
             }
             .sheet(isPresented: $showingDayDetail) {
                 if let date = selectedDayDate {
-                    DayDetailView(date: date, logs: selectedDayLogs)
-                        .presentationDetents([.height(300)])
+                    CalendarDayDetailPopup(date: date, logs: selectedDayLogs)
+                        .presentationDetents([.medium, .large])
                         .presentationDragIndicator(.visible)
                 }
             }
@@ -247,7 +247,7 @@ struct DayCell: View {
     }
 }
 
-struct DayDetailView: View {
+struct CalendarDayDetailPopup: View {
     let date: Date
     let logs: [DailyLog]
     @EnvironmentObject var databaseService: DatabaseService
@@ -255,8 +255,15 @@ struct DayDetailView: View {
 
     private var dateString: String {
         let formatter = DateFormatter()
-        formatter.dateStyle = .medium
+        formatter.dateStyle = .long
         return formatter.string(from: date)
+    }
+
+    private var daySummary: String {
+        let taken = logs.filter { $0.taken }.count
+        let total = logs.count
+        if total == 0 { return "No vitamins tracked" }
+        return "\(taken)/\(total) taken"
     }
 
     var body: some View {
@@ -264,41 +271,65 @@ struct DayDetailView: View {
             ZStack {
                 Color.backgroundLight.ignoresSafeArea()
 
-                VStack(spacing: 16) {
-                    Text(dateString)
-                        .font(.system(size: 15, weight: .medium))
-                        .foregroundColor(.textSecondary)
+                ScrollView {
+                    VStack(spacing: 20) {
+                        // Date header
+                        VStack(spacing: 4) {
+                            Text(dateString)
+                                .font(.system(size: 18, weight: .bold))
+                                .foregroundColor(.textPrimary)
+                            Text(daySummary)
+                                .font(.system(size: 13))
+                                .foregroundColor(.textSecondary)
+                        }
+                        .padding(.top, 8)
 
-                    if logs.isEmpty {
-                        Text("No vitamins logged")
-                            .font(.system(size: 15))
-                            .foregroundColor(.textSecondary)
-                            .padding(.top, 20)
-                    } else {
-                        ForEach(logs, id: \.id) { log in
-                            if let vitamin = getVitamin(id: log.vitaminId) {
-                                HStack {
-                                    Text(vitamin.pillEmoji)
-                                        .font(.system(size: 20))
-                                    Text(vitamin.name)
-                                        .font(.system(size: 15, weight: .medium))
-                                        .foregroundColor(.textPrimary)
-                                    Spacer()
-                                    Image(systemName: log.taken ? "checkmark.circle.fill" : "xmark.circle")
-                                        .foregroundColor(log.taken ? .accentGreen : .textSecondary)
+                        if logs.isEmpty {
+                            VStack(spacing: 12) {
+                                Image(systemName: "pills")
+                                    .font(.system(size: 32))
+                                    .foregroundColor(.inactiveEmpty)
+                                Text("No vitamins logged on this day")
+                                    .font(.system(size: 14))
+                                    .foregroundColor(.textSecondary)
+                            }
+                            .padding(.vertical, 32)
+                        } else {
+                            // Taken vitamins
+                            let takenLogs = logs.filter { $0.taken }
+                            if !takenLogs.isEmpty {
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Text("Taken")
+                                        .font(.system(size: 13, weight: .medium))
+                                        .foregroundColor(.textSecondary)
+
+                                    ForEach(takenLogs, id: \.id) { log in
+                                        if let vitamin = getVitamin(id: log.vitaminId) {
+                                            DayVitaminRow(vitamin: vitamin, taken: true, takenAt: log.takenAt)
+                                        }
+                                    }
                                 }
-                                .padding(.horizontal, 16)
-                                .padding(.vertical, 12)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .fill(Color.surfaceLight)
-                                )
+                            }
+
+                            // Missed vitamins
+                            let missedLogs = logs.filter { !$0.taken }
+                            if !missedLogs.isEmpty {
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Text("Missed")
+                                        .font(.system(size: 13, weight: .medium))
+                                        .foregroundColor(.textSecondary)
+
+                                    ForEach(missedLogs, id: \.id) { log in
+                                        if let vitamin = getVitamin(id: log.vitaminId) {
+                                            DayVitaminRow(vitamin: vitamin, taken: false, takenAt: nil)
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
-                    Spacer()
+                    .padding()
                 }
-                .padding()
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -314,6 +345,77 @@ struct DayDetailView: View {
 
     private func getVitamin(id: Int64) -> Vitamin? {
         try? databaseService.fetchAllVitamins().first { $0.id == id }
+    }
+}
+
+struct DayVitaminRow: View {
+    let vitamin: Vitamin
+    let taken: Bool
+    let takenAt: Date?
+
+    var body: some View {
+        HStack(spacing: 12) {
+            ZStack {
+                Circle()
+                    .fill(taken ? Color.accentGreen.opacity(0.15) : Color.inactiveEmpty.opacity(0.2))
+                    .frame(width: 40, height: 40)
+                Text(vitamin.pillEmoji)
+                    .font(.system(size: 18))
+            }
+
+            VStack(alignment: .leading, spacing: 2) {
+                Text(vitamin.name)
+                    .font(.system(size: 14, weight: .medium))
+                    .foregroundColor(.textPrimary)
+                Text(vitamin.dosage)
+                    .font(.system(size: 12))
+                    .foregroundColor(.textSecondary)
+            }
+
+            Spacer()
+
+            if taken, let at = takenAt {
+                VStack(alignment: .trailing, spacing: 2) {
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundColor(.accentGreen)
+                    Text(takenAtString(at))
+                        .font(.system(size: 10))
+                        .foregroundColor(.textSecondary)
+                }
+            } else {
+                Image(systemName: "xmark.circle")
+                    .foregroundColor(.inactiveEmpty)
+            }
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 10)
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .fill(Color.surfaceLight)
+        )
+    }
+
+    private func takenAtString(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        return formatter.string(from: date)
+    }
+}
+
+struct DayDetailView: View {
+    let date: Date
+    let logs: [DailyLog]
+    @EnvironmentObject var databaseService: DatabaseService
+    @Environment(\.dismiss) var dismiss
+
+    private var dateString: String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter.string(from: date)
+    }
+
+    var body: some View {
+        CalendarDayDetailPopup(date: date, logs: logs)
     }
 }
 

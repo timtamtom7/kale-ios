@@ -9,6 +9,12 @@ struct TodayView: View {
     @State private var showingPricing = false
     @State private var selectedDate = Date()
     @State private var weekDates: [Date] = []
+    @State private var selectedVitamin: Vitamin?
+    @State private var showingHistory = false
+    @State private var lowStockVitamins: [Vitamin] = []
+    @State private var showingLowStock = false
+    @State private var activeHint: SupplementInteraction?
+    @State private var shownHintIds: Set<String> = []
 
     var body: some View {
         NavigationStack {
@@ -18,16 +24,52 @@ struct TodayView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 20) {
                         greetingSection
+
+                        if !lowStockVitamins.isEmpty {
+                            lowStockSection
+                        }
+
                         vitaminCardsSection
                         weekDotsSection
                     }
                     .padding()
+
+                    // Floating hint toast
+                    if let hint = activeHint {
+                        VStack {
+                            Spacer()
+                            HStack {
+                                InteractionHintToast(hint: hint.hint) {
+                                    activeHint = nil
+                                }
+                                Spacer()
+                            }
+                            .padding(.horizontal, 16)
+                            .padding(.bottom, 8)
+                        }
+                    }
                 }
             }
             .navigationTitle("Kale")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     HStack(spacing: 12) {
+                        if !lowStockVitamins.isEmpty {
+                            Button {
+                                showingLowStock = true
+                            } label: {
+                                ZStack(alignment: .topTrailing) {
+                                    Image(systemName: "bell.badge.fill")
+                                        .font(.title2)
+                                        .foregroundColor(.orange)
+                                    Circle()
+                                        .fill(Color.red)
+                                        .frame(width: 8, height: 8)
+                                        .offset(x: 2, y: -2)
+                                }
+                            }
+                        }
+
                         Button {
                             showingAddVitamin = true
                         } label: {
@@ -53,6 +95,14 @@ struct TodayView: View {
             }
             .sheet(isPresented: $showingPricing) {
                 PricingView()
+            }
+            .sheet(isPresented: $showingLowStock) {
+                LowStockSheet(vitamins: lowStockVitamins)
+            }
+            .sheet(isPresented: $showingHistory) {
+                if let vitamin = selectedVitamin {
+                    VitaminHistoryView(vitamin: vitamin)
+                }
             }
             .onAppear {
                 loadData()
@@ -80,6 +130,17 @@ struct TodayView: View {
         .padding(.top, 8)
     }
 
+    private var lowStockSection: some View {
+        VStack(spacing: 8) {
+            ForEach(lowStockVitamins.prefix(2)) { vitamin in
+                LowStockAlertCard(vitamin: vitamin) {
+                    selectedVitamin = vitamin
+                    showingLowStock = true
+                }
+            }
+        }
+    }
+
     private var greetingText: String {
         let hour = Calendar.current.component(.hour, from: Date())
         if hour < 12 { return "Good morning." }
@@ -99,7 +160,11 @@ struct TodayView: View {
                     VitaminCard(
                         vitamin: vitamin,
                         isTaken: todayLogs[vitamin.id ?? 0] ?? false,
-                        onToggle: { toggleVitamin(vitamin) }
+                        onToggle: { toggleVitamin(vitamin) },
+                        onTap: {
+                            selectedVitamin = vitamin
+                            showingHistory = true
+                        }
                     )
                 }
             }
@@ -130,6 +195,7 @@ struct TodayView: View {
             vitamins = try databaseService.fetchAllVitamins()
             let logs = try databaseService.fetchLogs(for: Date())
             todayLogs = Dictionary(uniqueKeysWithValues: logs.map { ($0.vitaminId, $0.taken) })
+            lowStockVitamins = try databaseService.getLowStockVitamins()
         } catch {
             print("Load error: \(error)")
         }
@@ -153,6 +219,18 @@ struct TodayView: View {
         do {
             try databaseService.logTaken(vitaminId: vid, date: Date(), taken: newState)
             todayLogs[vid] = newState
+
+            // Decrement stock when taken
+            if newState && vitamin.stockCount != nil {
+                try databaseService.decrementStock(for: vitamin)
+                loadData()
+            }
+
+            // Show interaction hint when taken
+            if newState, let hint = InteractionHintService.getHint(for: vitamin.name), !shownHintIds.contains(hint.id) {
+                activeHint = hint
+                shownHintIds.insert(hint.id)
+            }
         } catch {
             print("Toggle error: \(error)")
         }

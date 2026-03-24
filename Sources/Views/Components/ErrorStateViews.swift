@@ -383,3 +383,100 @@ struct ScanOverlayView: View {
 #Preview("Empty Vitamins") {
     EmptyVitaminsView(onAddVitamin: {})
 }
+
+
+
+// MARK: - Calendar Data Missing
+
+struct CalendarDataMissingView: View {
+    let date: Date
+    var body: some View {
+        VStack(spacing: 12) {
+            Image(systemName: "calendar.badge.exclamationmark")
+                .font(.system(size: 32))
+                .foregroundColor(.textSecondary)
+
+            Text("No data for this date")
+                .font(.system(size: 14, weight: .medium))
+                .foregroundColor(.textPrimary)
+
+            Text("Tracking data for this day is not available.")
+                .font(.system(size: 12))
+                .foregroundColor(.textSecondary)
+                .multilineTextAlignment(.center)
+        }
+        .padding(24)
+        .frame(maxWidth: .infinity)
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.surfaceLight)
+        )
+    }
+}
+
+// MARK: - Low Stock Notification Failed
+
+struct LowStockNotificationFailedView: View {
+    let vitaminName: String
+    let onRetry: () -> Void
+
+    var body: some View {
+        HStack(spacing: 14) {
+            ZStack {
+                Circle()
+                    .fill(Color.red.opacity(0.1))
+                    .frame(width: 40, height: 40)
+                Image(systemName: "bell.slash.fill")
+                    .font(.system(size: 16))
+                    .foregroundColor(.red.opacity(0.7))
+            }
+
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Notification failed")
+                    .font(.system(size: 13, weight: .semibold))
+                    .foregroundColor(.textPrimary)
+                Text("Couldn't notify for \(vitaminName). Check notification permissions.")
+                    .font(.system(size: 11))
+                    .foregroundColor(.textSecondary)
+            }
+
+            Spacer()
+
+            Button(action: onRetry) {
+                Image(systemName: "arrow.clockwise")
+                    .font(.system(size: 12, weight: .medium))
+                    .foregroundColor(.accentGreen)
+                    .frame(width: 32, height: 32)
+                    .background(Color.accentGreen.opacity(0.1))
+                    .clipShape(Circle())
+            }
+        }
+        .padding(14)
+        .background(
+            RoundedRectangle(cornerRadius: 14)
+                .fill(Color.red.opacity(0.05))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 14)
+                        .stroke(Color.red.opacity(0.2), lineWidth: 1)
+                )
+        )
+    }
+}
+
+#Preview("Low Stock Detection Failed") {
+    LowStockDetectionFailedView(onRetry: {})
+        .padding()
+        .background(Color.backgroundLight)
+}
+
+#Preview("Calendar Data Missing") {
+    CalendarDataMissingView(date: Date())
+        .padding()
+        .background(Color.backgroundLight)
+}
+
+#Preview("Notification Failed") {
+    LowStockNotificationFailedView(vitaminName: "Vitamin D3", onRetry: {})
+        .padding()
+        .background(Color.backgroundLight)
+}

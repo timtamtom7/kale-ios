@@ -4,6 +4,7 @@ struct VitaminCard: View {
     let vitamin: Vitamin
     let isTaken: Bool
     let onToggle: () -> Void
+    var onTap: (() -> Void)? = nil
 
     @State private var animateCheck = false
     @State private var scale: CGFloat = 1.0
@@ -25,14 +26,20 @@ struct VitaminCard: View {
             HStack(spacing: 16) {
                 pillIcon
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(vitamin.name)
-                        .font(.system(size: 15, weight: .medium))
-                        .foregroundColor(isTaken ? .white : .textPrimary)
+                    HStack(spacing: 6) {
+                        Text(vitamin.name)
+                            .font(.system(size: 15, weight: .medium))
+                            .foregroundColor(isTaken ? .white : .textPrimary)
+                        if vitamin.stockCount != nil {
+                            stockIndicator
+                        }
+                    }
                     Text(vitamin.dosage)
                         .font(.system(size: 13))
                         .foregroundColor(isTaken ? .white.opacity(0.8) : .textSecondary)
                 }
                 Spacer()
+                historyChevron
                 checkmark
             }
             .padding(.horizontal, 16)
@@ -49,6 +56,12 @@ struct VitaminCard: View {
             .scaleEffect(scale)
         }
         .buttonStyle(.plain)
+        .simultaneousGesture(
+            TapGesture()
+                .onEnded { _ in
+                    onTap?()
+                }
+        )
     }
 
     private var pillIcon: some View {
@@ -78,6 +91,29 @@ struct VitaminCard: View {
             }
         }
         .frame(width: 26, height: 26)
+    }
+
+    private var historyChevron: some View {
+        Button {
+            onTap?()
+        } label: {
+            Image(systemName: "chevron.right")
+                .font(.system(size: 12, weight: .medium))
+                .foregroundColor(isTaken ? Color.white.opacity(0.6) : Color.textSecondary.opacity(0.5))
+        }
+        .buttonStyle(.plain)
+    }
+
+    private var stockIndicator: some View {
+        Group {
+            if let stock = vitamin.stockCount {
+                let days = stock / max(vitamin.dailyDose, 1)
+                let color: Color = days <= 3 ? .red : days <= 7 ? .orange : Color.white.opacity(0.7)
+                Circle()
+                    .fill(color)
+                    .frame(width: 6, height: 6)
+            }
+        }
     }
 }
 

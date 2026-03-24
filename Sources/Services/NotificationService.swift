@@ -97,4 +97,19 @@ final class NotificationService: ObservableObject {
         let request = UNNotificationRequest(identifier: "remind_later", content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request)
     }
+
+    func scheduleLowStockNotification(for vitamin: Vitamin) {
+        guard isAuthorized, let stock = vitamin.stockCount else { return }
+
+        let content = UNMutableNotificationContent()
+        content.title = "Low Stock Alert ⚠️"
+        content.body = "\(vitamin.name) is running low — only \(stock) capsules left."
+        content.sound = .default
+        content.categoryIdentifier = "LOW_STOCK"
+
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let identifier = "low_stock_\(vitamin.id ?? 0)"
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
+    }
 }
