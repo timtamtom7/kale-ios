@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01D7755129FD1A0411608CD8 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679ABDAE75B1BE836AD2CF93 /* NotificationService.swift */; };
+		0B91FF992108FBF8F286E434 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5231358D43AE5A2BAD452473 /* TodayView.swift */; };
+		188C1F3E76311711E97CC41D /* Vitamin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073247B7C18866170D14B6EF /* Vitamin.swift */; };
+		19A86739BBAF37B4EFAC0162 /* AppStoreContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CAA1517857CBA0C8E4E43E /* AppStoreContent.swift */; };
+		2213E524715718B3E98EDA1F /* KaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497F4E3F0DAC04B5FF86B8D /* KaleTests.swift */; };
+		3092B276A83F2A4641CDB4B7 /* SharedComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D020778B3A2ABBA8A450B96 /* SharedComponents.swift */; };
+		39E4A9270F3B85AC15A639B3 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80EC5A66D727A7DCD84C9C6 /* DatabaseService.swift */; };
+		3D669CD0099F8B805BB39FD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D17498D844C152870E6895 /* ContentView.swift */; };
+		45B43B9576926456A4275FC9 /* DailyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09671F9B108BE37E8F9EA81B /* DailyLog.swift */; };
+		5C505A971A0B1B7C2507BCFB /* PricingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA168765C2B22C19C1257F3F /* PricingView.swift */; };
+		6845A7919A3AD4B5EF2C328A /* BarcodeDatabase.json in Resources */ = {isa = PBXBuildFile; fileRef = CE5962FB7D5DDE73CD9336EC /* BarcodeDatabase.json */; };
+		80CFB490DA55AE3A7D714BAB /* KaleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EC4AB6B19E4CA6D2590EE7 /* KaleApp.swift */; };
+		9665DE79F1C787F3F5AB2533 /* ErrorStateViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BA85C371BC82EF87930180 /* ErrorStateViews.swift */; };
+		9DBBB1602FE844F284B9126E /* VitaminCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C4F9331E9675687551D4DB /* VitaminCard.swift */; };
+		A6905A3878AE27ED7EB8B15D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75E6F605B0BEDBACDBDD565 /* OnboardingView.swift */; };
+		A96776594D7A375B4AF78333 /* BarcodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BA6E2EF7E97BC859B16757 /* BarcodeService.swift */; };
+		BA4185F61B0D05C4480B63CB /* MonthlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E69B74C6B1770D6CE70C8A /* MonthlyView.swift */; };
+		BC941A5D1AC6B35476052E16 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = B5994D9444CAE64EC4FEB9F3 /* SQLite */; };
+		E0355A6B4C9DBEF1E3F1F453 /* AddVitaminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5947751A8E3891760751F69D /* AddVitaminView.swift */; };
+		F4E5C029063A3BF1DB6786DA /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA64560B0286C658EFB62FA9 /* ColorExtensions.swift */; };
+		FAF92B260D9F379C71C9D150 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710C16DA190DDDBC9A2045C6 /* SettingsView.swift */; };
+		FC5A89CBC3145AB1A19D513E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DC678177BD5FDEAEADB761F /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCCC10C97D951CFCB89D837A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F45CFCAA93C7D96A1EAD900 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 678DBA7851E795B6D11BBF9F;
+			remoteInfo = Kale;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		073247B7C18866170D14B6EF /* Vitamin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vitamin.swift; sourceTree = "<group>"; };
+		09671F9B108BE37E8F9EA81B /* DailyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLog.swift; sourceTree = "<group>"; };
+		19BA6E2EF7E97BC859B16757 /* BarcodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeService.swift; sourceTree = "<group>"; };
+		19E69B74C6B1770D6CE70C8A /* MonthlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyView.swift; sourceTree = "<group>"; };
+		2D5E2FD1887016DBBE7D2AF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		32BA85C371BC82EF87930180 /* ErrorStateViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateViews.swift; sourceTree = "<group>"; };
+		362C4223596FCC9169AF058E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3DC678177BD5FDEAEADB761F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5231358D43AE5A2BAD452473 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		52D17498D844C152870E6895 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5947751A8E3891760751F69D /* AddVitaminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVitaminView.swift; sourceTree = "<group>"; };
+		64EC4AB6B19E4CA6D2590EE7 /* KaleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleApp.swift; sourceTree = "<group>"; };
+		679ABDAE75B1BE836AD2CF93 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		6D020778B3A2ABBA8A450B96 /* SharedComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedComponents.swift; sourceTree = "<group>"; };
+		710C16DA190DDDBC9A2045C6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		77CAA1517857CBA0C8E4E43E /* AppStoreContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreContent.swift; sourceTree = "<group>"; };
+		841F3497490BF34D79E0C950 /* Kale.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kale.entitlements; sourceTree = "<group>"; };
+		9B4D13F1230773B4929BFA20 /* Kale.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Kale.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1C4F9331E9675687551D4DB /* VitaminCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminCard.swift; sourceTree = "<group>"; };
+		AA168765C2B22C19C1257F3F /* PricingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricingView.swift; sourceTree = "<group>"; };
+		B497F4E3F0DAC04B5FF86B8D /* KaleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleTests.swift; sourceTree = "<group>"; };
+		B75E6F605B0BEDBACDBDD565 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		BA64560B0286C658EFB62FA9 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		CE5962FB7D5DDE73CD9336EC /* BarcodeDatabase.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BarcodeDatabase.json; sourceTree = "<group>"; };
+		CF1341227DFA5E5D0F87DBDB /* KaleTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = KaleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E80EC5A66D727A7DCD84C9C6 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3CC0CEA9C1E1646D6E88FA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC941A5D1AC6B35476052E16 /* SQLite in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00ACC599A876B69C9DBC2CE7 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B75E6F605B0BEDBACDBDD565 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		087A68C24D6AD77ECA01B5EB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BA64560B0286C658EFB62FA9 /* ColorExtensions.swift */,
+				52D17498D844C152870E6895 /* ContentView.swift */,
+				64EC4AB6B19E4CA6D2590EE7 /* KaleApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		097BC8000CCCA5673320A976 = {
+			isa = PBXGroup;
+			children = (
+				7B0CA406033549E8994ADFC2 /* Sources */,
+				2FEA9CF6239EC748E61D22E7 /* SourcesTests */,
+				59317E171A85ED26CDA3D6E7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0988A50CC5EF3FE0335904F6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				32BA85C371BC82EF87930180 /* ErrorStateViews.swift */,
+				6D020778B3A2ABBA8A450B96 /* SharedComponents.swift */,
+				A1C4F9331E9675687551D4DB /* VitaminCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2FEA9CF6239EC748E61D22E7 /* SourcesTests */ = {
+			isa = PBXGroup;
+			children = (
+				362C4223596FCC9169AF058E /* Info.plist */,
+				B497F4E3F0DAC04B5FF86B8D /* KaleTests.swift */,
+			);
+			path = SourcesTests;
+			sourceTree = "<group>";
+		};
+		3B65C1652D0A40D548BD3D07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				77CAA1517857CBA0C8E4E43E /* AppStoreContent.swift */,
+				3DC678177BD5FDEAEADB761F /* Assets.xcassets */,
+				CE5962FB7D5DDE73CD9336EC /* BarcodeDatabase.json */,
+				2D5E2FD1887016DBBE7D2AF3 /* Info.plist */,
+				841F3497490BF34D79E0C950 /* Kale.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		59317E171A85ED26CDA3D6E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B4D13F1230773B4929BFA20 /* Kale.app */,
+				CF1341227DFA5E5D0F87DBDB /* KaleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6678EB91C5B1DFA48BC12842 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				09671F9B108BE37E8F9EA81B /* DailyLog.swift */,
+				073247B7C18866170D14B6EF /* Vitamin.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6D6CEA5D554A8F5EA9B110CA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				19BA6E2EF7E97BC859B16757 /* BarcodeService.swift */,
+				E80EC5A66D727A7DCD84C9C6 /* DatabaseService.swift */,
+				679ABDAE75B1BE836AD2CF93 /* NotificationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		790C20FCF02253076D59BF47 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5947751A8E3891760751F69D /* AddVitaminView.swift */,
+				19E69B74C6B1770D6CE70C8A /* MonthlyView.swift */,
+				710C16DA190DDDBC9A2045C6 /* SettingsView.swift */,
+				5231358D43AE5A2BAD452473 /* TodayView.swift */,
+				0988A50CC5EF3FE0335904F6 /* Components */,
+				00ACC599A876B69C9DBC2CE7 /* Onboarding */,
+				C5B2AFA3F6A1894F3F6FF801 /* Pricing */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7B0CA406033549E8994ADFC2 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				087A68C24D6AD77ECA01B5EB /* App */,
+				6678EB91C5B1DFA48BC12842 /* Models */,
+				3B65C1652D0A40D548BD3D07 /* Resources */,
+				6D6CEA5D554A8F5EA9B110CA /* Services */,
+				790C20FCF02253076D59BF47 /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C5B2AFA3F6A1894F3F6FF801 /* Pricing */ = {
+			isa = PBXGroup;
+			children = (
+				AA168765C2B22C19C1257F3F /* PricingView.swift */,
+			);
+			path = Pricing;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		678DBA7851E795B6D11BBF9F /* Kale */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31E5AA70A82D113B33DC03D1 /* Build configuration list for PBXNativeTarget "Kale" */;
+			buildPhases = (
+				7A443F7BB0932E7A7DC558AF /* Sources */,
+				F294EADFE01BA45E34A61991 /* Resources */,
+				C3CC0CEA9C1E1646D6E88FA7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kale;
+			packageProductDependencies = (
+				B5994D9444CAE64EC4FEB9F3 /* SQLite */,
+			);
+			productName = Kale;
+			productReference = 9B4D13F1230773B4929BFA20 /* Kale.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7FB38E648EABDCC1D6670162 /* KaleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0640C500FC41B357264A360 /* Build configuration list for PBXNativeTarget "KaleTests" */;
+			buildPhases = (
+				5D4E050E51B96C534A6D562C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7D9279CE76BBB9F44E8F951 /* PBXTargetDependency */,
+			);
+			name = KaleTests;
+			productName = KaleTests;
+			productReference = CF1341227DFA5E5D0F87DBDB /* KaleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F45CFCAA93C7D96A1EAD900 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					678DBA7851E795B6D11BBF9F = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					7FB38E648EABDCC1D6670162 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 73F1AAF56C956AB7BB818B9D /* Build configuration list for PBXProject "Kale" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 097BC8000CCCA5673320A976;
+			packageReferences = (
+				F0B8FBA6737804824F090C5B /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				678DBA7851E795B6D11BBF9F /* Kale */,
+				7FB38E648EABDCC1D6670162 /* KaleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F294EADFE01BA45E34A61991 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC5A89CBC3145AB1A19D513E /* Assets.xcassets in Resources */,
+				6845A7919A3AD4B5EF2C328A /* BarcodeDatabase.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D4E050E51B96C534A6D562C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2213E524715718B3E98EDA1F /* KaleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A443F7BB0932E7A7DC558AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0355A6B4C9DBEF1E3F1F453 /* AddVitaminView.swift in Sources */,
+				19A86739BBAF37B4EFAC0162 /* AppStoreContent.swift in Sources */,
+				A96776594D7A375B4AF78333 /* BarcodeService.swift in Sources */,
+				F4E5C029063A3BF1DB6786DA /* ColorExtensions.swift in Sources */,
+				3D669CD0099F8B805BB39FD7 /* ContentView.swift in Sources */,
+				45B43B9576926456A4275FC9 /* DailyLog.swift in Sources */,
+				39E4A9270F3B85AC15A639B3 /* DatabaseService.swift in Sources */,
+				9665DE79F1C787F3F5AB2533 /* ErrorStateViews.swift in Sources */,
+				80CFB490DA55AE3A7D714BAB /* KaleApp.swift in Sources */,
+				BA4185F61B0D05C4480B63CB /* MonthlyView.swift in Sources */,
+				01D7755129FD1A0411608CD8 /* NotificationService.swift in Sources */,
+				A6905A3878AE27ED7EB8B15D /* OnboardingView.swift in Sources */,
+				5C505A971A0B1B7C2507BCFB /* PricingView.swift in Sources */,
+				FAF92B260D9F379C71C9D150 /* SettingsView.swift in Sources */,
+				3092B276A83F2A4641CDB4B7 /* SharedComponents.swift in Sources */,
+				0B91FF992108FBF8F286E434 /* TodayView.swift in Sources */,
+				188C1F3E76311711E97CC41D /* Vitamin.swift in Sources */,
+				9DBBB1602FE844F284B9126E /* VitaminCard.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D7D9279CE76BBB9F44E8F951 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 678DBA7851E795B6D11BBF9F /* Kale */;
+			targetProxy = BCCC10C97D951CFCB89D837A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01E66033520356E1D1B46704 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sources/Resources/Kale.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Sources/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kale.app;
+				SDKROOT = iphoneos;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		15A297E8E26C7C292CF04D7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		2C376BC0139E83B258EEFA4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sources/Resources/Kale.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Sources/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kale.app;
+				SDKROOT = iphoneos;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52F26C2D870545D91A2F674B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SourcesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kale.app.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kale.app/Kale";
+			};
+			name = Debug;
+		};
+		CD4473CFECDE1A2F53CE046B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		CFE1857E17B3E83AA9E35028 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SourcesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kale.app.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kale.app/Kale";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		31E5AA70A82D113B33DC03D1 /* Build configuration list for PBXNativeTarget "Kale" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C376BC0139E83B258EEFA4F /* Debug */,
+				01E66033520356E1D1B46704 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		73F1AAF56C956AB7BB818B9D /* Build configuration list for PBXProject "Kale" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD4473CFECDE1A2F53CE046B /* Debug */,
+				15A297E8E26C7C292CF04D7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D0640C500FC41B357264A360 /* Build configuration list for PBXNativeTarget "KaleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52F26C2D870545D91A2F674B /* Debug */,
+				CFE1857E17B3E83AA9E35028 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F0B8FBA6737804824F090C5B /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.15.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B5994D9444CAE64EC4FEB9F3 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0B8FBA6737804824F090C5B /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 2F45CFCAA93C7D96A1EAD900 /* Project object */;
+}

@@ -1,0 +1,58 @@
+name: Kale
+options:
+  bundleIdPrefix: com.kale
+  deploymentTarget:
+    iOS: "26.0"
+  xcodeVersion: "15.0"
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_VERSION: "5.9"
+
+packages:
+  SQLite:
+    url: https://github.com/stephencelis/SQLite.swift
+    from: "0.15.0"
+
+targets:
+  Kale:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+    resources:
+      - path: Sources/Resources
+        excludes:
+          - "**/*.swift"
+    settings:
+      base:
+        INFOPLIST_FILE: Sources/Resources/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.kale.app
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD: "NO"
+        ENABLE_PREVIEWS: "YES"
+    dependencies:
+      - package: SQLite
+        product: SQLite
+    entitlements:
+      path: Sources/Resources/Kale.entitlements
+      properties:
+        aps-environment: development
+
+  KaleTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: SourcesTests
+    dependencies:
+      - target: Kale
+    settings:
+      base:
+        INFOPLIST_FILE: SourcesTests/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.kale.app.tests
