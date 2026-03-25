@@ -16,6 +16,7 @@
 		19A86739BBAF37B4EFAC0162 /* AppStoreContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CAA1517857CBA0C8E4E43E /* AppStoreContent.swift */; };
 		2213E524715718B3E98EDA1F /* KaleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B497F4E3F0DAC04B5FF86B8D /* KaleTests.swift */; };
 		3092B276A83F2A4641CDB4B7 /* SharedComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D020778B3A2ABBA8A450B96 /* SharedComponents.swift */; };
+		34F08D6915FE3C97CD0A4A72 /* AISupplementInsights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5264211AA28D096CE07E0E4F /* AISupplementInsights.swift */; };
 		39E4A9270F3B85AC15A639B3 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80EC5A66D727A7DCD84C9C6 /* DatabaseService.swift */; };
 		3C9E0458ADEE15BB65B66191 /* InteractionHints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C28C4DB62AAEDE752BE866C /* InteractionHints.swift */; };
 		3D669CD0099F8B805BB39FD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D17498D844C152870E6895 /* ContentView.swift */; };
@@ -39,6 +40,7 @@
 		BA4185F61B0D05C4480B63CB /* MonthlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E69B74C6B1770D6CE70C8A /* MonthlyView.swift */; };
 		BC941A5D1AC6B35476052E16 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = B5994D9444CAE64EC4FEB9F3 /* SQLite */; };
 		BDD58ED920CE154CCEA7AB4D /* FamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241BE14F284A495E0D7AA64 /* FamilyMember.swift */; };
+		C23A61ED7A2C5E6BE8B3D841 /* SmartReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06232DDD5AA3F625FE220783 /* SmartReminderService.swift */; };
 		CA351A599436C20ECFCC5337 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 292504F60975114BE2AE8DC6 /* SQLite */; };
 		CB255028FDEE13AD1156619B /* FamilyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3981A744BBA7EF18945EBB /* FamilyService.swift */; };
 		E0355A6B4C9DBEF1E3F1F453 /* AddVitaminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5947751A8E3891760751F69D /* AddVitaminView.swift */; };
@@ -72,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		02DCF100EC88ACDA67078D7C /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EventKit.framework; sourceTree = "<group>"; };
+		06232DDD5AA3F625FE220783 /* SmartReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartReminderService.swift; sourceTree = "<group>"; };
 		073247B7C18866170D14B6EF /* Vitamin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vitamin.swift; sourceTree = "<group>"; };
 		08328FB908B5E5A24FCD2AC0 /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
 		09671F9B108BE37E8F9EA81B /* DailyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLog.swift; sourceTree = "<group>"; };
@@ -90,6 +93,7 @@
 		40D1C33B163C28B508E71AE6 /* FamilyManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyManagementView.swift; sourceTree = "<group>"; };
 		4A44B266C0F83E6DD1FDBB39 /* LowStockAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LowStockAlertView.swift; sourceTree = "<group>"; };
 		5231358D43AE5A2BAD452473 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		5264211AA28D096CE07E0E4F /* AISupplementInsights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISupplementInsights.swift; sourceTree = "<group>"; };
 		52D17498D844C152870E6895 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5947751A8E3891760751F69D /* AddVitaminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVitaminView.swift; sourceTree = "<group>"; };
 		64EC4AB6B19E4CA6D2590EE7 /* KaleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleApp.swift; sourceTree = "<group>"; };
@@ -251,6 +255,7 @@
 		6D6CEA5D554A8F5EA9B110CA /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5264211AA28D096CE07E0E4F /* AISupplementInsights.swift */,
 				19BA6E2EF7E97BC859B16757 /* BarcodeService.swift */,
 				82DF98F8A31C266323583A41 /* CalendarService.swift */,
 				848CF8E47C17E679E71B3BA7 /* CommunityService.swift */,
@@ -258,6 +263,7 @@
 				2C3981A744BBA7EF18945EBB /* FamilyService.swift */,
 				D15F7865D55A1A3D9133B563 /* HealthInsightsService.swift */,
 				679ABDAE75B1BE836AD2CF93 /* NotificationService.swift */,
+				06232DDD5AA3F625FE220783 /* SmartReminderService.swift */,
 				6CF97241F7346EBD55F95FC0 /* SubscriptionManager.swift */,
 				D803C9256B1275704BCA2230 /* VitaminIntelligenceService.swift */,
 				DF79BF830187B3A3DD5DC2C3 /* WidgetDataService.swift */,
@@ -478,6 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34F08D6915FE3C97CD0A4A72 /* AISupplementInsights.swift in Sources */,
 				E0355A6B4C9DBEF1E3F1F453 /* AddVitaminView.swift in Sources */,
 				19A86739BBAF37B4EFAC0162 /* AppStoreContent.swift in Sources */,
 				A96776594D7A375B4AF78333 /* BarcodeService.swift in Sources */,
@@ -505,6 +512,7 @@
 				5C505A971A0B1B7C2507BCFB /* PricingView.swift in Sources */,
 				FAF92B260D9F379C71C9D150 /* SettingsView.swift in Sources */,
 				3092B276A83F2A4641CDB4B7 /* SharedComponents.swift in Sources */,
+				C23A61ED7A2C5E6BE8B3D841 /* SmartReminderService.swift in Sources */,
 				98A2153FE406ED6FA700F371 /* SubscriptionManager.swift in Sources */,
 				0B91FF992108FBF8F286E434 /* TodayView.swift in Sources */,
 				188C1F3E76311711E97CC41D /* Vitamin.swift in Sources */,
