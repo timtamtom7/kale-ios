@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		01D7755129FD1A0411608CD8 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679ABDAE75B1BE836AD2CF93 /* NotificationService.swift */; };
+		02E424730252B4B671CCFC5E /* KaleMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1A7C21E6CEC1B5589F522 /* KaleMacApp.swift */; };
 		0B91FF992108FBF8F286E434 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5231358D43AE5A2BAD452473 /* TodayView.swift */; };
+		117E1FCBBE6C977CDA65D9CF /* MacKaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2536B7E9B7BF3F21C40ABD7F /* MacKaleView.swift */; };
 		150F5F87D1A7F8B4D8AB23EE /* VitaminHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BE344194ED5DAC0AB09B0B /* VitaminHistoryView.swift */; };
 		188C1F3E76311711E97CC41D /* Vitamin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073247B7C18866170D14B6EF /* Vitamin.swift */; };
 		19A86739BBAF37B4EFAC0162 /* AppStoreContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CAA1517857CBA0C8E4E43E /* AppStoreContent.swift */; };
@@ -37,6 +39,7 @@
 		BA4185F61B0D05C4480B63CB /* MonthlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E69B74C6B1770D6CE70C8A /* MonthlyView.swift */; };
 		BC941A5D1AC6B35476052E16 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = B5994D9444CAE64EC4FEB9F3 /* SQLite */; };
 		BDD58ED920CE154CCEA7AB4D /* FamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241BE14F284A495E0D7AA64 /* FamilyMember.swift */; };
+		CA351A599436C20ECFCC5337 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 292504F60975114BE2AE8DC6 /* SQLite */; };
 		CB255028FDEE13AD1156619B /* FamilyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3981A744BBA7EF18945EBB /* FamilyService.swift */; };
 		E0355A6B4C9DBEF1E3F1F453 /* AddVitaminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5947751A8E3891760751F69D /* AddVitaminView.swift */; };
 		EAA887D28376EF76D260024D /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF98F8A31C266323583A41 /* CalendarService.swift */; };
@@ -74,6 +77,8 @@
 		09671F9B108BE37E8F9EA81B /* DailyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLog.swift; sourceTree = "<group>"; };
 		19BA6E2EF7E97BC859B16757 /* BarcodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeService.swift; sourceTree = "<group>"; };
 		19E69B74C6B1770D6CE70C8A /* MonthlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyView.swift; sourceTree = "<group>"; };
+		2536B7E9B7BF3F21C40ABD7F /* MacKaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacKaleView.swift; sourceTree = "<group>"; };
+		28E1A7C21E6CEC1B5589F522 /* KaleMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleMacApp.swift; sourceTree = "<group>"; };
 		2C3981A744BBA7EF18945EBB /* FamilyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyService.swift; sourceTree = "<group>"; };
 		2D5E2FD1887016DBBE7D2AF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		32BA85C371BC82EF87930180 /* ErrorStateViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateViews.swift; sourceTree = "<group>"; };
@@ -107,18 +112,29 @@
 		B497F4E3F0DAC04B5FF86B8D /* KaleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleTests.swift; sourceTree = "<group>"; };
 		B75E6F605B0BEDBACDBDD565 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		BA64560B0286C658EFB62FA9 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		BAC484326A44D590575C3155 /* KaleMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaleMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3B4469FA47726D2B49405C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CE5962FB7D5DDE73CD9336EC /* BarcodeDatabase.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BarcodeDatabase.json; sourceTree = "<group>"; };
 		CF1341227DFA5E5D0F87DBDB /* KaleTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = KaleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D15F7865D55A1A3D9133B563 /* HealthInsightsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthInsightsService.swift; sourceTree = "<group>"; };
 		D803C9256B1275704BCA2230 /* VitaminIntelligenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminIntelligenceService.swift; sourceTree = "<group>"; };
+		D9C88F29AFCE74DE003FD6FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DF79BF830187B3A3DD5DC2C3 /* WidgetDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDataService.swift; sourceTree = "<group>"; };
 		E07F5DADA3DDB5F5A44367EF /* FamilyComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyComparisonView.swift; sourceTree = "<group>"; };
 		E80EC5A66D727A7DCD84C9C6 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		EFED90B983FD838902EBC4DA /* KaleMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KaleMac.entitlements; sourceTree = "<group>"; };
 		F5BE344194ED5DAC0AB09B0B /* VitaminHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminHistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B445FAF06B595FC49F08B1AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA351A599436C20ECFCC5337 /* SQLite in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3CC0CEA9C1E1646D6E88FA7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,7 +180,9 @@
 		097BC8000CCCA5673320A976 = {
 			isa = PBXGroup;
 			children = (
+				6DF4736C92B827A6DBB4F4E5 /* Resources */,
 				7B0CA406033549E8994ADFC2 /* Sources */,
+				7F65AF5A60B9CFE54271FC60 /* Sources */,
 				2FEA9CF6239EC748E61D22E7 /* SourcesTests */,
 				05CA40595B7CEC2EF0D2D7B4 /* Widgets */,
 				BAFDA823C55CFD79FE277577 /* Frameworks */,
@@ -212,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				9B4D13F1230773B4929BFA20 /* Kale.app */,
+				BAC484326A44D590575C3155 /* KaleMac.app */,
 				CF1341227DFA5E5D0F87DBDB /* KaleTests.xctest */,
 				3B103AA9AAADBDB9E131D36A /* KaleWidget.appex */,
 			);
@@ -246,6 +265,16 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		6DF4736C92B827A6DBB4F4E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D9C88F29AFCE74DE003FD6FD /* Info.plist */,
+				EFED90B983FD838902EBC4DA /* KaleMac.entitlements */,
+			);
+			name = Resources;
+			path = KaleMac/Resources;
+			sourceTree = "<group>";
+		};
 		790C20FCF02253076D59BF47 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +301,16 @@
 				790C20FCF02253076D59BF47 /* Views */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		7F65AF5A60B9CFE54271FC60 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				28E1A7C21E6CEC1B5589F522 /* KaleMacApp.swift */,
+				2536B7E9B7BF3F21C40ABD7F /* MacKaleView.swift */,
+			);
+			name = Sources;
+			path = KaleMac/Sources;
 			sourceTree = "<group>";
 		};
 		BAFDA823C55CFD79FE277577 /* Frameworks */ = {
@@ -311,6 +350,25 @@
 			);
 			productName = Kale;
 			productReference = 9B4D13F1230773B4929BFA20 /* Kale.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6BE8AEA63CC4CF5093DF5747 /* KaleMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A77DE9D5C0F34CFF15E0186 /* Build configuration list for PBXNativeTarget "KaleMac" */;
+			buildPhases = (
+				E027677762858741056EC324 /* Sources */,
+				B445FAF06B595FC49F08B1AC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KaleMac;
+			packageProductDependencies = (
+				292504F60975114BE2AE8DC6 /* SQLite */,
+			);
+			productName = KaleMac;
+			productReference = BAC484326A44D590575C3155 /* KaleMac.app */;
 			productType = "com.apple.product-type.application";
 		};
 		7FB38E648EABDCC1D6670162 /* KaleTests */ = {
@@ -358,6 +416,10 @@
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
+					6BE8AEA63CC4CF5093DF5747 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
 					7FB38E648EABDCC1D6670162 = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
@@ -384,6 +446,7 @@
 			projectRoot = "";
 			targets = (
 				678DBA7851E795B6D11BBF9F /* Kale */,
+				6BE8AEA63CC4CF5093DF5747 /* KaleMac */,
 				7FB38E648EABDCC1D6670162 /* KaleTests */,
 				A73D2A1E8324D17528883DEC /* KaleWidget */,
 			);
@@ -461,6 +524,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E027677762858741056EC324 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02E424730252B4B671CCFC5E /* KaleMacApp.swift in Sources */,
+				117E1FCBBE6C977CDA65D9CF /* MacKaleView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -499,6 +571,32 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
+		};
+		11BEF59C8A62D1C4ACF39327 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_ENTITLEMENTS = KaleMac/Resources/KaleMac.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = KaleMac/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kale.app.macos;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
 		};
 		15A297E8E26C7C292CF04D7F /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -553,7 +651,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.9;
@@ -636,6 +733,32 @@
 			};
 			name = Debug;
 		};
+		9A6AA92343646F30CAA2AA54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_ENTITLEMENTS = KaleMac/Resources/KaleMac.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				INFOPLIST_FILE = KaleMac/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kale.app.macos;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
 		CD4473CFECDE1A2F53CE046B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -696,7 +819,6 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.9;
@@ -723,6 +845,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2A77DE9D5C0F34CFF15E0186 /* Build configuration list for PBXNativeTarget "KaleMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11BEF59C8A62D1C4ACF39327 /* Debug */,
+				9A6AA92343646F30CAA2AA54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		31E5AA70A82D113B33DC03D1 /* Build configuration list for PBXNativeTarget "Kale" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -773,6 +904,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		292504F60975114BE2AE8DC6 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0B8FBA6737804824F090C5B /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
 		B5994D9444CAE64EC4FEB9F3 /* SQLite */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F0B8FBA6737804824F090C5B /* XCRemoteSwiftPackageReference "SQLite.swift" */;

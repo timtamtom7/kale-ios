@@ -84,3 +84,34 @@ targets:
       base:
         INFOPLIST_FILE: SourcesTests/Info.plist
         PRODUCT_BUNDLE_IDENTIFIER: com.kale.app.tests
+
+  KaleMac:
+    type: application
+    platform: macOS
+    sources:
+      - path: KaleMac/Sources
+      - path: KaleMac/Resources
+    settings:
+      base:
+        INFOPLIST_FILE: KaleMac/Resources/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.kale.app.macos
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
+        SWIFT_VERSION: "5.9"
+        TARGETED_DEVICE_FAMILY: "2"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        DEVELOPMENT_TEAM: ""
+        CODE_SIGN_IDENTITY: ""
+        CODE_SIGNING_REQUIRED: "NO"
+        CODE_SIGNING_ALLOWED: "NO"
+        ENABLE_HARDENED_RUNTIME: "NO"
+        COMBINE_HIDPI_IMAGES: "YES"
+        MACOSX_DEPLOYMENT_TARGET: "14.0"
+    dependencies:
+      - package: SQLite
+    entitlements:
+      path: KaleMac/Resources/KaleMac.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.application-groups:
+          - group.com.kale.app
