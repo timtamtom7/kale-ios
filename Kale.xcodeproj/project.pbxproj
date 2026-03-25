@@ -20,6 +20,7 @@
 		45B43B9576926456A4275FC9 /* DailyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09671F9B108BE37E8F9EA81B /* DailyLog.swift */; };
 		48A3253748DC3B886AAE7BAB /* InteractionHintToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572970EA27E5F51978200D /* InteractionHintToast.swift */; };
 		5C505A971A0B1B7C2507BCFB /* PricingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA168765C2B22C19C1257F3F /* PricingView.swift */; };
+		634572440EFA73DC01D8351E /* VitaminIntelligenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D803C9256B1275704BCA2230 /* VitaminIntelligenceService.swift */; };
 		6845A7919A3AD4B5EF2C328A /* BarcodeDatabase.json in Resources */ = {isa = PBXBuildFile; fileRef = CE5962FB7D5DDE73CD9336EC /* BarcodeDatabase.json */; };
 		6CAB1696B44A6D8A15EA2CD0 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DCF100EC88ACDA67078D7C /* EventKit.framework */; };
 		6E1922D2700EF88EF8F57F3A /* HealthInsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BBD1DA6B963CF3454A7DA /* HealthInsightsView.swift */; };
@@ -110,6 +111,7 @@
 		CE5962FB7D5DDE73CD9336EC /* BarcodeDatabase.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BarcodeDatabase.json; sourceTree = "<group>"; };
 		CF1341227DFA5E5D0F87DBDB /* KaleTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = KaleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D15F7865D55A1A3D9133B563 /* HealthInsightsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthInsightsService.swift; sourceTree = "<group>"; };
+		D803C9256B1275704BCA2230 /* VitaminIntelligenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminIntelligenceService.swift; sourceTree = "<group>"; };
 		DF79BF830187B3A3DD5DC2C3 /* WidgetDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDataService.swift; sourceTree = "<group>"; };
 		E07F5DADA3DDB5F5A44367EF /* FamilyComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyComparisonView.swift; sourceTree = "<group>"; };
 		E80EC5A66D727A7DCD84C9C6 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				D15F7865D55A1A3D9133B563 /* HealthInsightsService.swift */,
 				679ABDAE75B1BE836AD2CF93 /* NotificationService.swift */,
 				6CF97241F7346EBD55F95FC0 /* SubscriptionManager.swift */,
+				D803C9256B1275704BCA2230 /* VitaminIntelligenceService.swift */,
 				DF79BF830187B3A3DD5DC2C3 /* WidgetDataService.swift */,
 			);
 			path = Services;
@@ -444,6 +447,7 @@
 				188C1F3E76311711E97CC41D /* Vitamin.swift in Sources */,
 				9DBBB1602FE844F284B9126E /* VitaminCard.swift in Sources */,
 				150F5F87D1A7F8B4D8AB23EE /* VitaminHistoryView.swift in Sources */,
+				634572440EFA73DC01D8351E /* VitaminIntelligenceService.swift in Sources */,
 				87F31DD5E31AF8DDABF39B94 /* WidgetDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
