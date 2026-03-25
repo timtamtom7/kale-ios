@@ -1,0 +1,349 @@
+{
+  "" : {
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/Kale-primary.dia",
+    "emit-module-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/Kale-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/Kale-primary-emit-module.dia",
+    "pch" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/Kale-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/Kale-primary.swiftdeps"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/App/ColorExtensions.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ColorExtensions.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ColorExtensions.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ColorExtensions.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ColorExtensions.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ColorExtensions.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ColorExtensions.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ColorExtensions.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ColorExtensions~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/App/ContentView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/App/KaleApp.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleApp.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleApp.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleApp.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleApp.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleApp.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleApp.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleApp.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleApp~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Models/DailyLog.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/DailyLog.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/DailyLog.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/DailyLog.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/DailyLog.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/DailyLog.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/DailyLog.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/DailyLog.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/DailyLog~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Models/FamilyMember.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyMember.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyMember.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyMember.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyMember.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyMember.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyMember.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyMember.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyMember~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Models/InteractionHints.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/InteractionHints.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/InteractionHints.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/InteractionHints.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/InteractionHints.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/InteractionHints.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/InteractionHints.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/InteractionHints.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/InteractionHints~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Models/Vitamin.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/Vitamin.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/Vitamin.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/Vitamin.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/Vitamin.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/Vitamin.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/Vitamin.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/Vitamin.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/Vitamin~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Resources/AppStoreContent.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AppStoreContent.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AppStoreContent.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AppStoreContent.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AppStoreContent.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AppStoreContent.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AppStoreContent.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AppStoreContent.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AppStoreContent~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Services/BarcodeService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/BarcodeService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/BarcodeService.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/BarcodeService.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/BarcodeService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/BarcodeService.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/BarcodeService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/BarcodeService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/BarcodeService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Services/CalendarService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CalendarService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CalendarService.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CalendarService.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CalendarService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CalendarService.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CalendarService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CalendarService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CalendarService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Services/CommunityService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityService.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityService.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityService.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Services/DatabaseService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/DatabaseService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/DatabaseService.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/DatabaseService.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/DatabaseService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/DatabaseService.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/DatabaseService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/DatabaseService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/DatabaseService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Services/FamilyService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyService.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyService.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyService.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Services/HealthInsightsService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/HealthInsightsService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/HealthInsightsService.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/HealthInsightsService.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/HealthInsightsService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/HealthInsightsService.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/HealthInsightsService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/HealthInsightsService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/HealthInsightsService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Services/NotificationService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/NotificationService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/NotificationService.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/NotificationService.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/NotificationService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/NotificationService.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/NotificationService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/NotificationService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/NotificationService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Services/SubscriptionManager.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SubscriptionManager.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SubscriptionManager.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SubscriptionManager.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SubscriptionManager.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SubscriptionManager.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SubscriptionManager.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SubscriptionManager.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SubscriptionManager~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Services/WidgetDataService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/WidgetDataService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/WidgetDataService.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/WidgetDataService.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/WidgetDataService.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/WidgetDataService.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/WidgetDataService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/WidgetDataService.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/WidgetDataService~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Views/AddVitaminView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AddVitaminView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AddVitaminView.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AddVitaminView.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AddVitaminView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AddVitaminView.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AddVitaminView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AddVitaminView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AddVitaminView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Views/CommunityView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityView.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityView.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityView.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Views/Components/ErrorStateViews.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ErrorStateViews.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ErrorStateViews.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ErrorStateViews.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ErrorStateViews.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ErrorStateViews.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ErrorStateViews.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ErrorStateViews.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ErrorStateViews~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Views/Components/FamilyComparisonView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyComparisonView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyComparisonView.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyComparisonView.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyComparisonView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyComparisonView.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyComparisonView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyComparisonView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyComparisonView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Views/Components/FamilyManagementView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyManagementView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyManagementView.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyManagementView.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyManagementView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyManagementView.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyManagementView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyManagementView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/FamilyManagementView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Views/Components/InteractionHintToast.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/InteractionHintToast.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/InteractionHintToast.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/InteractionHintToast.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/InteractionHintToast.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/InteractionHintToast.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/InteractionHintToast.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/InteractionHintToast.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/InteractionHintToast~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Views/Components/LowStockAlertView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/LowStockAlertView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/LowStockAlertView.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/LowStockAlertView.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/LowStockAlertView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/LowStockAlertView.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/LowStockAlertView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/LowStockAlertView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/LowStockAlertView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Views/Components/SharedComponents.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SharedComponents.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SharedComponents.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SharedComponents.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SharedComponents.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SharedComponents.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SharedComponents.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SharedComponents.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SharedComponents~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Views/Components/VitaminCard.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminCard.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminCard.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminCard.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminCard.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminCard.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminCard.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminCard.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminCard~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Views/Components/VitaminHistoryView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminHistoryView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminHistoryView.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminHistoryView.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminHistoryView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminHistoryView.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminHistoryView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminHistoryView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminHistoryView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Views/HealthInsightsView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/HealthInsightsView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/HealthInsightsView.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/HealthInsightsView.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/HealthInsightsView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/HealthInsightsView.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/HealthInsightsView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/HealthInsightsView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/HealthInsightsView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Views/MonthlyView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/MonthlyView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/MonthlyView.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/MonthlyView.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/MonthlyView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/MonthlyView.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/MonthlyView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/MonthlyView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/MonthlyView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Views/Onboarding/OnboardingView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/OnboardingView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/OnboardingView.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/OnboardingView.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/OnboardingView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/OnboardingView.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/OnboardingView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/OnboardingView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/OnboardingView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Views/Pricing/PricingView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/PricingView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/PricingView.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/PricingView.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/PricingView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/PricingView.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/PricingView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/PricingView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/PricingView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Views/SettingsView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SettingsView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SettingsView.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SettingsView.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SettingsView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SettingsView.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SettingsView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SettingsView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/SettingsView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Views/TodayView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/TodayView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/TodayView.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/TodayView.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/TodayView.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/TodayView.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/TodayView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/TodayView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/TodayView~partial.swiftmodule"
+  },
+  "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}
