@@ -120,7 +120,7 @@ struct ReminderCopy {
     }
 
     static var sampleMorningBody: String {
-        let body = morningBodies.randomElement()!
+        let body = morningBodies.randomElement() ?? "Time to take your vitamins!"
         let vitamins = SampleVitamin.common.prefix(3).map { $0.name }
         let formatted = formatVitaminList(Array(vitamins))
         return body.replacingOccurrences(of: "{vitamins}", with: formatted)

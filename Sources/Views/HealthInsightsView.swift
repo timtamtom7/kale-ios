@@ -290,7 +290,7 @@ struct HealthInsightsView: View {
             vitamins = try databaseService.fetchAllVitamins()
             currentReport = try healthService.generateMonthlyReport(for: selectedMonth)
 
-            let prevMonth = Calendar.current.date(byAdding: .month, value: -1, to: selectedMonth)!
+            let prevMonth = Calendar.current.date(byAdding: .month, value: -1, to: selectedMonth) ?? selectedMonth
             previousReport = try healthService.generateMonthlyReport(for: prevMonth)
 
             correlationInsights = try healthService.generateCorrelationInsights(for: vitamins)

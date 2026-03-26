@@ -335,15 +335,20 @@ final class DatabaseService: ObservableObject {
         }
 
         // Count consecutive days taken backwards from today/yesterday
-        var currentDate = calendar.date(byAdding: .day, value: -1, to: today)!
-        let startDate = calendar.date(byAdding: .day, value: -365, to: today)!
+        guard var currentDate = calendar.date(byAdding: .day, value: -1, to: today),
+              let startDate = calendar.date(byAdding: .day, value: -365, to: today) else {
+            return 0
+        }
 
         while currentDate >= startDate {
             let key = formatter.string(from: currentDate)
             if let row = try? db.pluck(dailyLogs.filter(vitaminId == vid && dateKey == key)),
                let taken = try? row.get(taken), taken {
                 streak += 1
-                currentDate = calendar.date(byAdding: .day, value: -1, to: currentDate)!
+                guard let nextDate = calendar.date(byAdding: .day, value: -1, to: currentDate) else {
+                    break
+                }
+                currentDate = nextDate
             } else {
                 break
             }

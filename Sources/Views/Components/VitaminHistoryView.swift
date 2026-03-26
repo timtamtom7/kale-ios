@@ -257,7 +257,9 @@ struct VitaminHistoryView: View {
         var dots: [DayDot] = []
 
         for offset in (0..<30).reversed() {
-            let date = calendar.date(byAdding: .day, value: -offset, to: today)!
+            guard let date = calendar.date(byAdding: .day, value: -offset, to: today) else {
+                continue
+            }
             let log = last30DaysLogs.first { calendar.isDate($0.date, inSameDayAs: date) }
             let isTaken = log?.taken ?? false
 
@@ -335,7 +337,7 @@ struct VitaminHistoryView: View {
 
             let calendar = Calendar.current
             let today = calendar.startOfDay(for: Date())
-            let thirtyDaysAgo = calendar.date(byAdding: .day, value: -30, to: today)!
+            let thirtyDaysAgo = calendar.date(byAdding: .day, value: -30, to: today) ?? calendar.date(byAdding: .day, value: -30, to: Date()) ?? Date()
 
             let logs = try databaseService.fetchLogs(forMonth: today)
             var allLogs: [DailyLog] = []
