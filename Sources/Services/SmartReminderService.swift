@@ -5,7 +5,7 @@ import UserNotifications
 // R11: Smart Reminders for Kale
 // Contextual reminders, location-based, adaptive frequency
 @MainActor
-final class SmartReminderService: NSObject, ObservableObject, CLLocationManagerDelegate {
+final class SmartReminderService: NSObject, ObservableObject {
     static let shared = SmartReminderService()
 
     @Published var isLocationEnabled = false
@@ -71,7 +71,6 @@ final class SmartReminderService: NSObject, ObservableObject, CLLocationManagerD
     // MARK: - Adaptive Reminders
 
     func scheduleAdaptiveReminder(supplementName: String, baselineFrequency: Int) {
-        // More frequent reminders for supplements user often forgets
         let schedule = ReminderSchedule(
             id: UUID(),
             supplementName: supplementName,
@@ -85,18 +84,17 @@ final class SmartReminderService: NSObject, ObservableObject, CLLocationManagerD
     }
 
     func adjustAdaptiveFrequency(for supplementName: String, basedOnMissedDoses: Int) {
-        // Increase frequency if often missed
-        // Decrease frequency if always taken
         guard let index = reminderSchedules.firstIndex(where: { $0.supplementName == supplementName && $0.reminderType == .adaptive }) else { return }
 
         var schedule = reminderSchedules[index]
 
         if basedOnMissedDoses > 3 {
-            // Add extra reminder
+            // Add extra reminder 2 hours later
+            let adjustedTime = schedule.reminderTime.addingTimeInterval(3600 * 2)
             schedule = ReminderSchedule(
                 id: schedule.id,
                 supplementName: schedule.supplementName,
-                reminderTime: schedule.reminderTime.addingTimeInterval(3600 * 2), // 2 hours later
+                reminderTime: adjustedTime,
                 reminderType: .adaptive,
                 isEnabled: true,
                 lastTriggered: nil
@@ -126,7 +124,6 @@ final class SmartReminderService: NSObject, ObservableObject, CLLocationManagerD
         )
         reminderSchedules.append(schedule)
 
-        // Register geofence
         let region = CLCircularRegion(
             center: location,
             radius: radius,
@@ -141,19 +138,9 @@ final class SmartReminderService: NSObject, ObservableObject, CLLocationManagerD
         saveSchedules()
     }
 
-    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        // Trigger reminder when entering location
-        sendNotification(
-            title: "Take \(region.identifier)",
-            body: "You're at a good location to take your supplement",
-            identifier: "loc-\(region.identifier)"
-        )
-    }
-
     // MARK: - Skip Notification
 
     func sendSkipNotification(supplementName: String) {
-        // "You skipped yesterday" notification
         sendNotification(
             title: "You skipped \(supplementName) yesterday",
             body: "Tap to log it now",
@@ -206,6 +193,31 @@ final class SmartReminderService: NSObject, ObservableObject, CLLocationManagerD
     private func saveSchedules() {
         if let data = try? JSONEncoder().encode(reminderSchedules) {
             UserDefaults.standard.set(data, forKey: "reminderSchedules")
+        }
+    }
+}
+
+// MARK: - CLLocationManagerDelegate
+
+extension SmartReminderService: CLLocationManagerDelegate {
+    nonisolated func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        Task { @MainActor in
+            sendNotification(
+                title: "Take \(region.identifier)",
+                body: "You're at a good location to take your supplement",
+                identifier: "loc-\(region.identifier)"
+            )
+        }
+    }
+
+    nonisolated func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        Task { @MainActor in
+            switch manager.authorizationStatus {
+            case .authorizedWhenInUse, .authorizedAlways:
+                isLocationEnabled = true
+            default:
+                isLocationEnabled = false
+            }
         }
     }
 }

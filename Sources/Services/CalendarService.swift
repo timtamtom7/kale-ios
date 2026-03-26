@@ -187,7 +187,7 @@ final class CalendarService: ObservableObject {
         guard isAuthorized, travelDetectionEnabled else { return }
 
         let startDate = Date()
-        let endDate = Calendar.current.date(byAdding: .day, value: nextDays, to: startDate)!
+        guard let endDate = Calendar.current.date(byAdding: .day, value: nextDays, to: startDate) else { return }
 
         let predicate = eventStore.predicateForEvents(withStart: startDate, end: endDate, calendars: nil)
         let events = eventStore.events(matching: predicate)

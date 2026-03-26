@@ -1,5 +1,12 @@
 import Foundation
 
+// MARK: - Health Insights Errors
+
+enum HealthInsightsError: Error {
+    case dateComputationFailed
+    case insufficientData
+}
+
 // MARK: - Health Insight Models
 
 struct MonthlyReport: Identifiable, Codable {
@@ -141,9 +148,11 @@ final class HealthInsightsService: ObservableObject {
         let today = calendar.startOfDay(for: Date())
 
         // Previous month for comparison
-        let prevMonthDate = calendar.date(byAdding: .month, value: -1, to: date)!
+        guard let prevMonthDate = calendar.date(byAdding: .month, value: -1, to: date) else {
+            throw HealthInsightsError.dateComputationFailed
+        }
         let prevConsistency = try databaseService.getConsistencyScore(forMonth: prevMonthDate)
-        let currentConsistency = try databaseService.getConsistencyScore(forMonth: date)
+        // currentConsistency is computed below as overallConsistency
 
         let logs = try databaseService.fetchLogs(forMonth: date)
 
@@ -166,10 +175,10 @@ final class HealthInsightsService: ObservableObject {
             var weekdayMisses = 0
             var weekendMisses = 0
             var weekdayCounts = [Int: Int]()  // weekday -> miss count
-            var weekendCounts = [Int: Int]()   // weekday -> miss count
+            // Note: weekendCounts was unused and removed — tracking is via weekdayCounts only
 
             for dayOffset in 0..<daysInMonth {
-                let dayDate = calendar.date(byAdding: .day, value: dayOffset, to: startOfMonth)!
+                guard let dayDate = calendar.date(byAdding: .day, value: dayOffset, to: startOfMonth) else { break }
                 if dayDate > today { break }
 
                 let weekday = calendar.component(.weekday, from: dayDate)
@@ -268,7 +277,7 @@ final class HealthInsightsService: ObservableObject {
 
         for vitamin in vitamins {
             guard let vid = vitamin.id else { continue }
-            let history = try databaseService.getVitaminHistory(vitaminId: vid)
+            let _ = try databaseService.getVitaminHistory(vitaminId: vid) // Validates vitamin exists
 
             let calendar = Calendar.current
             let today = calendar.startOfDay(for: Date())
@@ -279,12 +288,12 @@ final class HealthInsightsService: ObservableObject {
             var weekendDays: Double = 0
 
             for monthOffset in 0..<months {
-                let monthDate = calendar.date(byAdding: .month, value: -monthOffset, to: today)!
+                guard let monthDate = calendar.date(byAdding: .month, value: -monthOffset, to: today) else { continue }
                 let (startOfMonth, daysInMonth) = Self.monthBounds(for: monthDate, calendar: calendar)
                 let logs = try databaseService.fetchLogs(forMonth: monthDate)
 
                 for dayOffset in 0..<daysInMonth {
-                    let dayDate = calendar.date(byAdding: .day, value: dayOffset, to: startOfMonth)!
+                    guard let dayDate = calendar.date(byAdding: .day, value: dayOffset, to: startOfMonth) else { break }
                     if dayDate > today { break }
 
                     let weekday = calendar.component(.weekday, from: dayDate)
@@ -398,9 +407,14 @@ final class HealthInsightsService: ObservableObject {
     // MARK: - Helpers
 
     private static func monthBounds(for date: Date, calendar: Calendar) -> (Date, Int) {
-        let startOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: date))!
-        let daysInMonth = calendar.range(of: .day, in: .month, for: date)!.count
-        return (startOfMonth, daysInMonth)
+        let components = calendar.dateComponents([.year, .month], from: date)
+        guard let startOfMonth = calendar.date(from: components),
+              let daysRange = calendar.range(of: .day, in: .month, for: date) else {
+            // Fallback: return today as start with 30 days
+            let today = calendar.startOfDay(for: date)
+            return (today, 30)
+        }
+        return (startOfMonth, daysRange.count)
     }
 
     private static func dateKey(_ date: Date) -> String {

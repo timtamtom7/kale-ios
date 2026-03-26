@@ -106,7 +106,7 @@ struct FamilyComparisonView: View {
     private func loadData() {
         isLoading = true
         do {
-            try familyService.ensureCurrentUser()
+            _ = try familyService.ensureCurrentUser()
             members = try familyService.fetchAllMembers()
         } catch {
             print("Load family members error: \(error)")

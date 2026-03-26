@@ -140,9 +140,11 @@ struct MonthlyView: View {
     }
 
     private var daysInMonth: [Date?] {
-        let startOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: currentMonth))!
+        guard let startOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: currentMonth)),
+              let daysInMonthRange = calendar.range(of: .day, in: .month, for: currentMonth) else {
+            return Array(repeating: nil, count: 35)
+        }
         let firstWeekday = calendar.component(.weekday, from: startOfMonth)
-        let daysInMonthRange = calendar.range(of: .day, in: .month, for: currentMonth)!
 
         let offsetFromMonday = (firstWeekday + 5) % 7
         var days: [Date?] = Array(repeating: nil, count: offsetFromMonday)
@@ -184,7 +186,7 @@ struct MonthlyView: View {
                 if allVitamins.isEmpty {
                     dayStatuses[key] = .empty
                 } else if takenCount == 0 {
-                    dayStatuses[key] = .none
+                    dayStatuses[key] = DayStatus.none
                 } else if takenCount == allVitamins.count {
                     dayStatuses[key] = .complete
                 } else {

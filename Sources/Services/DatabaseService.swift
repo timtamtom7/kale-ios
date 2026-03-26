@@ -178,8 +178,10 @@ final class DatabaseService: ObservableObject {
         guard let db = db else { throw DatabaseError.connectionFailed }
 
         let calendar = Calendar.current
-        let startOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: date))!
-        let endOfMonth = calendar.date(byAdding: DateComponents(month: 1, day: -1), to: startOfMonth)!
+        guard let startOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: date)),
+              let endOfMonth = calendar.date(byAdding: DateComponents(month: 1, day: -1), to: startOfMonth) else {
+            throw DatabaseError.queryFailed
+        }
 
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
@@ -224,19 +226,20 @@ final class DatabaseService: ObservableObject {
         if allVitamins.isEmpty { return 0.0 }
 
         let calendar = Calendar.current
-        let startOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: date))!
-        let daysInMonth = calendar.range(of: .day, in: .month, for: date)!.count
+        guard let startOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: date)),
+              let daysRange = calendar.range(of: .day, in: .month, for: date) else {
+            return 0.0
+        }
+        let daysInMonth = daysRange.count
 
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
-        let startKey = formatter.string(from: startOfMonth)
-        let endKey = formatter.string(from: calendar.date(byAdding: .day, value: daysInMonth - 1, to: startOfMonth)!)
 
         var totalExpected = 0
         var totalTaken = 0
 
         for dayOffset in 0..<daysInMonth {
-            let dayDate = calendar.date(byAdding: .day, value: dayOffset, to: startOfMonth)!
+            guard let dayDate = calendar.date(byAdding: .day, value: dayOffset, to: startOfMonth) else { break }
             let today = calendar.startOfDay(for: Date())
             if dayDate > today { break }
 
@@ -262,9 +265,9 @@ final class DatabaseService: ObservableObject {
             }
         }
 
-        if takenCount == 0 { return .none }
-        if takenCount == allVitamins.count { return .complete }
-        return .partial
+        if takenCount == 0 { return DayStatus.none }
+        if takenCount == allVitamins.count { return DayStatus.complete }
+        return DayStatus.partial
     }
 
     // MARK: - Vitamin History
@@ -276,7 +279,7 @@ final class DatabaseService: ObservableObject {
         formatter.dateFormat = "yyyy-MM-dd"
 
         let today = Calendar.current.startOfDay(for: Date())
-        var thirtyDaysAgo = Calendar.current.date(byAdding: .day, value: -30, to: today)!
+        let thirtyDaysAgo = Calendar.current.date(byAdding: .day, value: -30, to: today) ?? today
 
         var lastTakenDate: Date?
         var daysTaken = 0
@@ -297,7 +300,7 @@ final class DatabaseService: ObservableObject {
 
         // Total days taken ever
         var totalDaysTaken = 0
-        for row in try db.prepare(dailyLogs.filter(vitaminId == vid && taken == true)) {
+        for _ in try db.prepare(dailyLogs.filter(vitaminId == vid && taken == true)) {
             totalDaysTaken += 1
         }
 
@@ -359,8 +362,8 @@ final class DatabaseService: ObservableObject {
     }
 
     func decrementStock(for vitamin: Vitamin) throws {
-        guard let vid = vitamin.id, var stock = vitamin.stockCount else { return }
-        stock = max(0, stock - vitamin.dailyDose)
+        guard vitamin.stockCount != nil, vitamin.id != nil else { return }
+        let newStock = max(0, vitamin.stockCount! - vitamin.dailyDose)
         let updated = Vitamin(
             id: vitamin.id,
             name: vitamin.name,
@@ -369,14 +372,14 @@ final class DatabaseService: ObservableObject {
             pillEmoji: vitamin.pillEmoji,
             reminderTime: vitamin.reminderTime,
             createdAt: vitamin.createdAt,
-            stockCount: stock,
+            stockCount: newStock,
             dailyDose: vitamin.dailyDose
         )
         try updateVitamin(updated)
     }
 
     func updateStock(for vitamin: Vitamin, count: Int) throws {
-        guard let vid = vitamin.id else { return }
+        guard vitamin.id != nil else { return }
         let updated = Vitamin(
             id: vitamin.id,
             name: vitamin.name,
@@ -406,4 +409,6 @@ enum DayStatus {
 
 enum DatabaseError: Error {
     case connectionFailed
+    case queryFailed
+    case insertFailed
 }
