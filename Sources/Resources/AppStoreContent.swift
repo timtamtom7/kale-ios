@@ -115,7 +115,7 @@ struct ReminderCopy {
             return "\(vitamins[0]) + \(vitamins[1])"
         } else {
             let first = vitamins.prefix(vitamins.count - 1).joined(separator: ", ")
-            return "\(first) + \(vitamins.last!)"
+            return "\(first) + \(vitamins.last ?? "")"
         }
     }
 
