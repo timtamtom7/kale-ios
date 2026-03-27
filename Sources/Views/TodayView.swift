@@ -59,6 +59,7 @@ struct TodayView: View {
                     HStack(spacing: 12) {
                         if !lowStockVitamins.isEmpty {
                             Button {
+                                HapticManager.light()
                                 showingLowStock = true
                             } label: {
                                 ZStack(alignment: .topTrailing) {
@@ -71,31 +72,39 @@ struct TodayView: View {
                                         .offset(x: 2, y: -2)
                                 }
                             }
+                            .accessibilityLabel("Low stock alert")
+                            .accessibilityHint("Opens low stock vitamins")
                         }
 
                         Button {
+                            HapticManager.medium()
                             showingAddVitamin = true
                         } label: {
                             Image(systemName: "plus.circle.fill")
                                 .font(.title2)
                                 .foregroundColor(.accentGreen)
                         }
+                        .accessibilityLabel("Add vitamin")
 
                         Button {
+                            HapticManager.light()
                             showingPricing = true
                         } label: {
                             Image(systemName: "crown.fill")
                                 .font(.system(size: 16))
                                 .foregroundColor(.yellow)
                         }
+                        .accessibilityLabel("View subscription options")
 
                         Button {
+                            HapticManager.light()
                             showingFamilyView = true
                         } label: {
                             Image(systemName: "person.3.fill")
                                 .font(.system(size: 16))
                                 .foregroundColor(.accentGreen)
                         }
+                        .accessibilityLabel("Family sharing")
                     }
                 }
             }
@@ -128,16 +137,16 @@ struct TodayView: View {
     private var greetingSection: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(greetingText)
-                .font(.system(size: 15, weight: .regular))
+                .font(Theme.Typography.body)
                 .foregroundColor(.textSecondary)
 
             if vitamins.isEmpty {
                 Text("Add vitamins to get started")
-                    .font(.system(size: 13, weight: .regular))
+                    .font(Theme.Typography.sm)
                     .foregroundColor(.textSecondary.opacity(0.7))
             } else {
                 Text("\(allTakenCount)/\(vitamins.count) taken today")
-                    .font(.system(size: 13, weight: .regular))
+                    .font(Theme.Typography.sm)
                     .foregroundColor(.textSecondary.opacity(0.7))
             }
         }
@@ -196,7 +205,7 @@ struct TodayView: View {
     private var weekDotsSection: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("This week")
-                .font(.system(size: 13, weight: .medium))
+                .font(Theme.Typography.subheadline)
                 .foregroundColor(.textSecondary)
 
             HStack(spacing: 6) {
@@ -248,6 +257,13 @@ struct TodayView: View {
         let currentState = todayLogs[vid] ?? false
         let newState = !currentState
 
+        // Haptic feedback - success when marking taken, light when unchecking
+        if newState {
+            HapticManager.success()
+        } else {
+            HapticManager.light()
+        }
+
         do {
             try databaseService.logTaken(vitaminId: vid, date: Date(), taken: newState)
             todayLogs[vid] = newState
@@ -267,6 +283,7 @@ struct TodayView: View {
                 shownHintIds.insert(hint.id)
             }
         } catch {
+            HapticManager.error()
             print("Toggle error: \(error)")
         }
     }
@@ -292,13 +309,14 @@ struct WeekDot: View {
     var body: some View {
         VStack(spacing: 4) {
             Text(dayLabel)
-                .font(.system(size: 11, weight: .medium))
+                .font(Theme.Typography.xs)
                 .foregroundColor(isToday ? .accentGreen : .textSecondary)
 
             Circle()
                 .fill(statusColor)
                 .frame(width: 10, height: 10)
         }
+        .accessibilityLabel("\(dayName) \(Calendar.current.component(.day, from: date)): \(statusDescription)")
         .onAppear {
             loadStatus()
         }
@@ -308,6 +326,20 @@ struct WeekDot: View {
         let formatter = DateFormatter()
         formatter.dateFormat = "E"
         return String(formatter.string(from: date).prefix(1))
+    }
+    
+    private var dayName: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE"
+        return formatter.string(from: date)
+    }
+    
+    private var statusDescription: String {
+        switch status {
+        case .empty, .none: return "no vitamins taken"
+        case .partial: return "some vitamins taken"
+        case .complete: return "all vitamins taken"
+        }
     }
 
     private var statusColor: Color {

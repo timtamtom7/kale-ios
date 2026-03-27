@@ -72,9 +72,11 @@ struct AddVitaminView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Cancel") {
+                        HapticManager.light()
                         dismiss()
                     }
                     .foregroundColor(.accentGreen)
+                    .accessibilityLabel("Cancel adding vitamin")
                 }
             }
             .onAppear {
@@ -128,7 +130,7 @@ struct AddVitaminView: View {
     private var emojiPicker: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Icon")
-                .font(.system(size: 13, weight: .medium))
+                .font(Theme.Typography.subheadline)
                 .foregroundColor(.textSecondary)
 
             ScrollView(.horizontal, showsIndicators: false) {
@@ -146,8 +148,10 @@ struct AddVitaminView: View {
                                     .stroke(pillEmoji == emoji ? Color.accentGreen : Color.clear, lineWidth: 2)
                             )
                             .onTapGesture {
+                                HapticManager.selection()
                                 pillEmoji = emoji
                             }
+                            .accessibilityLabel("\(emoji) icon")
                     }
                 }
             }
@@ -158,49 +162,53 @@ struct AddVitaminView: View {
         VStack(spacing: 16) {
             VStack(alignment: .leading, spacing: 6) {
                 Text("Name")
-                    .font(.system(size: 13, weight: .medium))
+                    .font(Theme.Typography.subheadline)
                     .foregroundColor(.textSecondary)
                 TextField("Vitamin D3", text: $vitaminName)
-                    .font(.system(size: 15))
+                    .font(Theme.Typography.body)
                     .padding(12)
                     .background(Color.surfaceLight)
-                    .cornerRadius(12)
+                    .cornerRadius(Theme.CornerRadius.md)
+                    .accessibilityLabel("Vitamin name")
             }
 
             VStack(alignment: .leading, spacing: 6) {
                 Text("Dosage")
-                    .font(.system(size: 13, weight: .medium))
+                    .font(Theme.Typography.subheadline)
                     .foregroundColor(.textSecondary)
                 TextField("2000 IU", text: $dosage)
-                    .font(.system(size: 15))
+                    .font(Theme.Typography.body)
                     .padding(12)
                     .background(Color.surfaceLight)
-                    .cornerRadius(12)
+                    .cornerRadius(Theme.CornerRadius.md)
+                    .accessibilityLabel("Dosage amount")
             }
 
             HStack(spacing: 12) {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Capsules in stock")
-                        .font(.system(size: 13, weight: .medium))
+                        .font(Theme.Typography.subheadline)
                         .foregroundColor(.textSecondary)
                     TextField("e.g. 60", text: $stockCountText)
-                        .font(.system(size: 15))
+                        .font(Theme.Typography.body)
                         .keyboardType(.numberPad)
                         .padding(12)
                         .background(Color.surfaceLight)
-                        .cornerRadius(12)
+                        .cornerRadius(Theme.CornerRadius.md)
+                        .accessibilityLabel("Number of capsules in stock")
                 }
 
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Daily capsules")
-                        .font(.system(size: 13, weight: .medium))
+                        .font(Theme.Typography.subheadline)
                         .foregroundColor(.textSecondary)
                     TextField("1", text: $dailyDoseText)
-                        .font(.system(size: 15))
+                        .font(Theme.Typography.body)
                         .keyboardType(.numberPad)
                         .padding(12)
                         .background(Color.surfaceLight)
-                        .cornerRadius(12)
+                        .cornerRadius(Theme.CornerRadius.md)
+                        .accessibilityLabel("Daily dose amount")
                 }
             }
 
@@ -209,7 +217,7 @@ struct AddVitaminView: View {
                     Image(systemName: "barcode")
                         .foregroundColor(.accentGreen)
                     Text(barcode)
-                        .font(.system(size: 13))
+                        .font(Theme.Typography.sm)
                         .foregroundColor(.textSecondary)
                     Spacer()
                     Image(systemName: "checkmark.circle.fill")
@@ -217,7 +225,7 @@ struct AddVitaminView: View {
                 }
                 .padding(10)
                 .background(Color.accentGreen.opacity(0.1))
-                .cornerRadius(8)
+                .cornerRadius(Theme.CornerRadius.sm)
             }
         }
     }
@@ -225,7 +233,7 @@ struct AddVitaminView: View {
     private var reminderSection: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Daily Reminder")
-                .font(.system(size: 13, weight: .medium))
+                .font(Theme.Typography.subheadline)
                 .foregroundColor(.textSecondary)
 
             DatePicker("", selection: $reminderTime, displayedComponents: .hourAndMinute)
@@ -233,37 +241,41 @@ struct AddVitaminView: View {
                 .labelsHidden()
                 .frame(maxWidth: .infinity)
                 .background(Color.surfaceLight)
-                .cornerRadius(12)
+                .cornerRadius(Theme.CornerRadius.md)
         }
     }
 
     private var saveButton: some View {
         Button {
             if !canAddVitamin {
+                HapticManager.warning()
                 showingLimitReached = true
             } else {
+                HapticManager.success()
                 saveVitamin()
             }
         } label: {
             VStack(spacing: 4) {
                 Text("Save Vitamin")
-                    .font(.system(size: 16, weight: .semibold))
+                    .font(Theme.Typography.headline)
                     .foregroundColor(.white)
                 if !subscriptionManager.canAccess(.unlimitedVitamins) && currentVitaminCount >= 2 {
                     Text("\(3 - currentVitaminCount) slot left")
-                        .font(.system(size: 10))
+                        .font(Theme.Typography.xs)
                         .foregroundColor(.white.opacity(0.8))
                 }
             }
             .frame(maxWidth: .infinity)
             .padding(.vertical, 16)
             .background(
-                RoundedRectangle(cornerRadius: 14)
+                RoundedRectangle(cornerRadius: Theme.CornerRadius.md)
                     .fill(Color.accentGreen)
             )
         }
         .disabled(vitaminName.isEmpty || dosage.isEmpty)
         .opacity(vitaminName.isEmpty || dosage.isEmpty ? 0.5 : 1)
+        .accessibilityLabel("Save vitamin")
+        .accessibilityHint(vitaminName.isEmpty || dosage.isEmpty ? "Fill in name and dosage first" : "Saves the vitamin")
     }
 
     private func handleBarcode(_ code: String) {

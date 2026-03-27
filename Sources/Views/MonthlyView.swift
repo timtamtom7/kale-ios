@@ -78,7 +78,7 @@ struct MonthlyView: View {
         .frame(maxWidth: .infinity)
         .padding(.vertical, 24)
         .background(
-            RoundedRectangle(cornerRadius: 20)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                 .fill(Color.surfaceLight)
                 .shadow(color: Color.black.opacity(0.06), radius: 12, x: 0, y: 4)
         )
@@ -116,7 +116,7 @@ struct MonthlyView: View {
         }
         .padding(16)
         .background(
-            RoundedRectangle(cornerRadius: 20)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                 .fill(Color.surfaceLight)
                 .shadow(color: Color.black.opacity(0.06), radius: 12, x: 0, y: 4)
         )
@@ -403,7 +403,7 @@ struct DayVitaminRow: View {
         .padding(.horizontal, 14)
         .padding(.vertical, 10)
         .background(
-            RoundedRectangle(cornerRadius: 12)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.md)
                 .fill(Color.surfaceLight)
         )
     }

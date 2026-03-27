@@ -80,7 +80,7 @@ struct VitaminHistoryView: View {
         }
         .padding(16)
         .background(
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                 .fill(Color.surfaceLight)
                 .shadow(color: Color.black.opacity(0.05), radius: 8, x: 0, y: 4)
         )
@@ -188,7 +188,7 @@ struct VitaminHistoryView: View {
         }
         .padding(16)
         .background(
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                 .fill(Color.surfaceLight)
                 .shadow(color: Color.black.opacity(0.05), radius: 8, x: 0, y: 4)
         )
@@ -239,7 +239,7 @@ struct VitaminHistoryView: View {
         }
         .padding(16)
         .background(
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                 .fill(Color.surfaceLight)
                 .shadow(color: Color.black.opacity(0.05), radius: 8, x: 0, y: 4)
         )
@@ -290,7 +290,7 @@ struct VitaminHistoryView: View {
                             .keyboardType(.numberPad)
                             .padding(12)
                             .background(Color.surfaceLight)
-                            .cornerRadius(12)
+                            .cornerRadius(Theme.CornerRadius.md)
                         Text("Enter how many capsules you currently have")
                             .font(.system(size: 12))
                             .foregroundColor(.textSecondary)
@@ -309,7 +309,7 @@ struct VitaminHistoryView: View {
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 16)
                             .background(Color.accentGreen)
-                            .clipShape(RoundedRectangle(cornerRadius: 14))
+                            .clipShape(RoundedRectangle(cornerRadius: Theme.CornerRadius.md))
                     }
                     .disabled(Int(stockText) == nil)
 
@@ -383,7 +383,7 @@ struct StatCard: View {
         .frame(maxWidth: .infinity)
         .padding(.vertical, 12)
         .background(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.md)
                 .fill(Color.surfaceLight)
                 .shadow(color: Color.black.opacity(0.04), radius: 6, x: 0, y: 3)
         )

@@ -41,12 +41,12 @@ struct InteractionHintToast: View {
         }
         .padding(14)
         .background(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.md)
                 .fill(Color.surfaceLight)
                 .shadow(color: Color.black.opacity(0.1), radius: 12, x: 0, y: 4)
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.md)
                 .stroke(Color.accentWarm.opacity(0.4), lineWidth: 1)
         )
         .opacity(appeared ? 1 : 0)

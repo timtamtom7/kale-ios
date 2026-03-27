@@ -44,10 +44,10 @@ struct LowStockAlertCard: View {
         }
         .padding(14)
         .background(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.md)
                 .fill(Color.orange.opacity(0.08))
                 .overlay(
-                    RoundedRectangle(cornerRadius: 14)
+                    RoundedRectangle(cornerRadius: Theme.CornerRadius.md)
                         .stroke(Color.orange.opacity(0.3), lineWidth: 1)
                 )
         )
@@ -129,7 +129,7 @@ struct LowStockSheet: View {
                             .keyboardType(.numberPad)
                             .padding(12)
                             .background(Color.surfaceLight)
-                            .cornerRadius(12)
+                            .cornerRadius(Theme.CornerRadius.md)
                     }
 
                     Button {
@@ -144,7 +144,7 @@ struct LowStockSheet: View {
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 16)
                             .background(Color.accentGreen)
-                            .clipShape(RoundedRectangle(cornerRadius: 14))
+                            .clipShape(RoundedRectangle(cornerRadius: Theme.CornerRadius.md))
                     }
                     .disabled(Int(stockText) == nil)
 
@@ -184,7 +184,7 @@ struct LowStockDetectionFailedView: View {
         }
         .padding(12)
         .background(
-            RoundedRectangle(cornerRadius: 12)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.md)
                 .fill(Color.red.opacity(0.08))
         )
     }

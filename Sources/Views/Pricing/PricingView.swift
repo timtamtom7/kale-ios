@@ -89,7 +89,7 @@ struct PricingView: View {
         }
         .padding(4)
         .background(Color.surfaceLight)
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .clipShape(RoundedRectangle(cornerRadius: Theme.CornerRadius.md))
     }
 
     private func billingOption(_ label: String, isSelected: Bool, action: @escaping () -> Void) -> some View {
@@ -102,12 +102,12 @@ struct PricingView: View {
                 .background(
                     Group {
                         if isSelected {
-                            RoundedRectangle(cornerRadius: 9)
+                            RoundedRectangle(cornerRadius: Theme.CornerRadius.sm)
                                 .fill(Color.accentGreen)
                         }
                     }
                 )
-                .clipShape(RoundedRectangle(cornerRadius: 9))
+                .clipShape(RoundedRectangle(cornerRadius: Theme.CornerRadius.sm))
         }
     }
 
@@ -157,7 +157,7 @@ struct PricingView: View {
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 16)
                         .background(Color.accentGreen)
-                        .clipShape(RoundedRectangle(cornerRadius: 14))
+                        .clipShape(RoundedRectangle(cornerRadius: Theme.CornerRadius.md))
                 }
 
                 Text(selectedTier == .daily
@@ -257,10 +257,10 @@ struct PricingTierCard: View {
             }
             .padding(20)
             .background(
-                RoundedRectangle(cornerRadius: 20)
+                RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                     .fill(Color.surfaceLight)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 20)
+                        RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                             .stroke(isSelected ? Color.accentGreen : Color.inactiveEmpty.opacity(0.5), lineWidth: isSelected ? 2 : 1)
                     )
                     .shadow(color: Color.black.opacity(isSelected ? 0.1 : 0.06), radius: isSelected ? 16 : 10, x: 0, y: 4)

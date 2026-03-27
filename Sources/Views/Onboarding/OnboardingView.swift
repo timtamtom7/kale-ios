@@ -117,7 +117,7 @@ struct OnboardingPage2: View {
 
                 // Barcode scan illustration
                 ZStack {
-                    RoundedRectangle(cornerRadius: 24)
+                    RoundedRectangle(cornerRadius: Theme.CornerRadius.xl)
                         .fill(Color.surfaceLight)
                         .shadow(color: Color.black.opacity(0.1), radius: 20, x: 0, y: 8)
                         .frame(width: 220, height: 140)
@@ -149,7 +149,7 @@ struct OnboardingPage2: View {
 
                 // Camera frame overlay
                 ZStack {
-                    RoundedRectangle(cornerRadius: 16)
+                    RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                         .stroke(Color.accentGreen, lineWidth: 3)
                         .frame(width: 260, height: 100)
 
@@ -204,14 +204,14 @@ struct OnboardingPage3: View {
                 // Notification illustration
                 ZStack {
                     // Phone mockup
-                    RoundedRectangle(cornerRadius: 28)
+                    RoundedRectangle(cornerRadius: Theme.CornerRadius.xl)
                         .fill(Color.surfaceLight)
                         .shadow(color: Color.black.opacity(0.12), radius: 24, x: 0, y: 12)
                         .frame(width: 180, height: 360)
 
                     VStack(spacing: 0) {
                         // Dynamic Island
-                        RoundedRectangle(cornerRadius: 12)
+                        RoundedRectangle(cornerRadius: Theme.CornerRadius.md)
                             .fill(Color.black)
                             .frame(width: 80, height: 24)
                             .padding(.top, 12)
@@ -261,7 +261,7 @@ struct OnboardingPage3: View {
                         }
                         .padding(16)
                         .background(
-                            RoundedRectangle(cornerRadius: 16)
+                            RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                                 .fill(Color.backgroundLight)
                         )
                         .padding(.horizontal, 16)
@@ -343,7 +343,7 @@ struct OnboardingPage4: View {
                 .padding(.horizontal, 32)
                 .padding(.vertical, 20)
                 .background(
-                    RoundedRectangle(cornerRadius: 20)
+                    RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                         .fill(Color.surfaceLight.opacity(0.8))
                         .shadow(color: Color.black.opacity(0.06), radius: 12, x: 0, y: 4)
                 )
@@ -361,7 +361,7 @@ struct OnboardingPage4: View {
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 16)
                             .background(Color.accentGreen)
-                            .clipShape(RoundedRectangle(cornerRadius: 14))
+                            .clipShape(RoundedRectangle(cornerRadius: Theme.CornerRadius.md))
                     }
 
                     Button {

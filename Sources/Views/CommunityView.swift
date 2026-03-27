@@ -123,7 +123,7 @@ struct CommunityView: View {
         }
         .padding(4)
         .background(Color.surfaceLight)
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .clipShape(RoundedRectangle(cornerRadius: Theme.CornerRadius.md))
         .padding(.horizontal)
         .padding(.top, 8)
     }
@@ -142,12 +142,12 @@ struct CommunityView: View {
                 .background(
                     Group {
                         if selectedTab == index {
-                            RoundedRectangle(cornerRadius: 9)
+                            RoundedRectangle(cornerRadius: Theme.CornerRadius.sm)
                                 .fill(Color.accentGreen)
                         }
                     }
                 )
-                .clipShape(RoundedRectangle(cornerRadius: 9))
+                .clipShape(RoundedRectangle(cornerRadius: Theme.CornerRadius.sm))
         }
     }
 
@@ -342,7 +342,7 @@ struct RoutineCard: View {
             }
         }
         .background(
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                 .fill(Color.surfaceLight)
                 .shadow(color: Color.black.opacity(0.05), radius: 8, x: 0, y: 3)
         )
@@ -378,7 +378,7 @@ struct ShareRoutineView: View {
                                 .font(.system(size: 15))
                                 .padding(12)
                                 .background(Color.surfaceLight)
-                                .cornerRadius(12)
+                                .cornerRadius(Theme.CornerRadius.md)
                         }
 
                         // Your vitamins
@@ -408,7 +408,7 @@ struct ShareRoutineView: View {
                                     }
                                     .padding(12)
                                     .background(Color.surfaceLight)
-                                    .cornerRadius(10)
+                                    .cornerRadius(Theme.CornerRadius.sm)
                                 }
                             }
                         }
@@ -555,7 +555,7 @@ struct ImportRoutineConfirmView: View {
                                     }
                                     .padding(12)
                                     .background(Color.surfaceLight)
-                                    .cornerRadius(10)
+                                    .cornerRadius(Theme.CornerRadius.sm)
                                 }
                             }
 
@@ -575,7 +575,7 @@ struct ImportRoutineConfirmView: View {
                                 .frame(maxWidth: .infinity)
                                 .padding(.vertical, 16)
                                 .background(Color.accentGreen)
-                                .clipShape(RoundedRectangle(cornerRadius: 14))
+                                .clipShape(RoundedRectangle(cornerRadius: Theme.CornerRadius.md))
                         }
                         .padding()
                         .background(Color.backgroundLight)
@@ -624,7 +624,7 @@ struct ImportRoutineConfirmView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 16)
                     .background(Color.accentGreen)
-                    .clipShape(RoundedRectangle(cornerRadius: 14))
+                    .clipShape(RoundedRectangle(cornerRadius: Theme.CornerRadius.md))
             }
             .padding(.horizontal, 40)
             .padding(.bottom, 40)

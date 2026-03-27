@@ -167,7 +167,7 @@ struct HealthInsightsView: View {
         }
         .padding(20)
         .background(
-            RoundedRectangle(cornerRadius: 20)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                 .fill(Color.surfaceLight)
                 .shadow(color: Color.black.opacity(0.06), radius: 12, x: 0, y: 4)
         )
@@ -221,7 +221,7 @@ struct HealthInsightsView: View {
         }
         .padding(16)
         .background(
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                 .fill(Color.surfaceLight)
                 .shadow(color: Color.black.opacity(0.04), radius: 8, x: 0, y: 3)
         )
@@ -247,7 +247,7 @@ struct HealthInsightsView: View {
         }
         .padding(16)
         .background(
-            RoundedRectangle(cornerRadius: 20)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                 .fill(Color.surfaceLight)
                 .shadow(color: Color.black.opacity(0.04), radius: 8, x: 0, y: 3)
         )
@@ -278,7 +278,7 @@ struct HealthInsightsView: View {
         }
         .padding(16)
         .background(
-            RoundedRectangle(cornerRadius: 20)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                 .fill(Color.surfaceLight)
                 .shadow(color: Color.black.opacity(0.04), radius: 8, x: 0, y: 3)
         )
@@ -366,7 +366,7 @@ struct VitaminInsightRow: View {
         }
         .padding(14)
         .background(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.md)
                 .fill(Color.backgroundLight)
         )
     }
@@ -455,7 +455,7 @@ struct CorrelationInsightCard: View {
         }
         .padding(14)
         .background(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.md)
                 .fill(Color.backgroundLight)
         )
     }

@@ -97,7 +97,7 @@ struct BarcodeScanFailedView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 14)
                     .background(Color.accentGreen)
-                    .clipShape(RoundedRectangle(cornerRadius: 14))
+                    .clipShape(RoundedRectangle(cornerRadius: Theme.CornerRadius.md))
                 }
 
                 Button(action: onEnterManually) {
@@ -296,13 +296,13 @@ struct ScanOverlayView: View {
                         .mask(
                             Rectangle()
                                 .overlay(
-                                    RoundedRectangle(cornerRadius: 20)
+                                    RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                                         .frame(width: 280, height: 110)
                                         .blendMode(.destinationOut)
                                 )
                         )
 
-                    RoundedRectangle(cornerRadius: 20)
+                    RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                         .stroke(Color.accentGreen, lineWidth: 3)
                         .frame(width: 280, height: 110)
 
@@ -424,7 +424,7 @@ struct CalendarDataMissingView: View {
         .padding(24)
         .frame(maxWidth: .infinity)
         .background(
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                 .fill(Color.surfaceLight)
         )
     }
@@ -469,10 +469,10 @@ struct LowStockNotificationFailedView: View {
         }
         .padding(14)
         .background(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.md)
                 .fill(Color.red.opacity(0.05))
                 .overlay(
-                    RoundedRectangle(cornerRadius: 14)
+                    RoundedRectangle(cornerRadius: Theme.CornerRadius.md)
                         .stroke(Color.red.opacity(0.2), lineWidth: 1)
                 )
         )

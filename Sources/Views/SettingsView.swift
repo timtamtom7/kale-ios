@@ -29,7 +29,7 @@ struct SettingsView: View {
                         }
                     } header: {
                         Text("Notifications")
-                            .font(.system(size: 13, weight: .medium))
+                            .font(Theme.Typography.subheadline)
                     }
 
                     // Calendar Integration section
@@ -38,16 +38,17 @@ struct SettingsView: View {
                         travelDetectionRow
                     } header: {
                         Text("Calendar Integration")
-                            .font(.system(size: 13, weight: .medium))
+                            .font(Theme.Typography.subheadline)
                     } footer: {
                         Text("Sync vitamin reminders with Apple Calendar. Travel detection pauses reminders when you're away.")
-                            .font(.system(size: 11))
+                            .font(Theme.Typography.xs)
                             .foregroundColor(.textSecondary)
                     }
 
                     // Family section
                     Section {
                         Button {
+                            HapticManager.light()
                             showingFamilyView = true
                         } label: {
                             HStack {
@@ -56,14 +57,14 @@ struct SettingsView: View {
                                     .frame(width: 28)
 
                                 Text("Family Sharing")
-                                    .font(.system(size: 15))
+                                    .font(Theme.Typography.body)
                                     .foregroundColor(.textPrimary)
 
                                 Spacer()
 
                                 if let count = try? familyService.memberCount() {
                                     Text("\(count) member\(count == 1 ? "" : "s")")
-                                        .font(.system(size: 13))
+                                        .font(Theme.Typography.sm)
                                         .foregroundColor(.textSecondary)
                                 }
 
@@ -72,18 +73,21 @@ struct SettingsView: View {
                                     .foregroundColor(.textSecondary.opacity(0.5))
                             }
                         }
+                        .accessibilityLabel("Family sharing")
+                        .accessibilityHint("Opens family management")
                     } header: {
                         Text("Family")
-                            .font(.system(size: 13, weight: .medium))
+                            .font(Theme.Typography.subheadline)
                     } footer: {
                         Text("Track vitamins together. Up to 6 family members. Complete plan required.")
-                            .font(.system(size: 11))
+                            .font(Theme.Typography.xs)
                             .foregroundColor(.textSecondary)
                     }
 
                     // Subscription section
                     Section {
                         Button {
+                            HapticManager.light()
                             showingPricing = true
                         } label: {
                             HStack {
@@ -92,13 +96,13 @@ struct SettingsView: View {
                                     .frame(width: 28)
 
                                 Text("Subscription")
-                                    .font(.system(size: 15))
+                                    .font(Theme.Typography.body)
                                     .foregroundColor(.textPrimary)
 
                                 Spacer()
 
                                 Text("Free")
-                                    .font(.system(size: 13))
+                                    .font(Theme.Typography.sm)
                                     .foregroundColor(.textSecondary)
 
                                 Image(systemName: "chevron.right")
@@ -106,9 +110,11 @@ struct SettingsView: View {
                                     .foregroundColor(.textSecondary.opacity(0.5))
                             }
                         }
+                        .accessibilityLabel("Subscription")
+                        .accessibilityHint("Opens subscription options")
                     } header: {
                         Text("Plan")
-                            .font(.system(size: 13, weight: .medium))
+                            .font(Theme.Typography.subheadline)
                     }
 
                     // Vitamins section
@@ -127,24 +133,27 @@ struct SettingsView: View {
 
                         if vitamins.isEmpty {
                             Text("No vitamins added")
-                                .font(.system(size: 15))
+                                .font(Theme.Typography.body)
                                 .foregroundColor(.textSecondary)
                         }
                     } header: {
                         Text("My Vitamins")
-                            .font(.system(size: 13, weight: .medium))
+                            .font(Theme.Typography.subheadline)
                     }
 
                     // Data section
                     Section {
                         Button {
+                            HapticManager.light()
                             exportData()
                         } label: {
                             Label("Export Data", systemImage: "square.and.arrow.up")
                                 .foregroundColor(.textPrimary)
                         }
+                        .accessibilityLabel("Export data")
 
                         Button {
+                            HapticManager.light()
                             if let url = URL(string: UIApplication.openSettingsURLString) {
                                 UIApplication.shared.open(url)
                             }
@@ -152,25 +161,26 @@ struct SettingsView: View {
                             Label("App Settings", systemImage: "gear")
                                 .foregroundColor(.textPrimary)
                         }
+                        .accessibilityLabel("App settings")
                     } header: {
                         Text("Data")
-                            .font(.system(size: 13, weight: .medium))
+                            .font(Theme.Typography.subheadline)
                     }
 
                     // About section
                     Section {
                         HStack {
                             Text("Version")
-                                .font(.system(size: 15))
+                                .font(Theme.Typography.body)
                                 .foregroundColor(.textPrimary)
                             Spacer()
                             Text("1.0.0")
-                                .font(.system(size: 15))
+                                .font(Theme.Typography.body)
                                 .foregroundColor(.textSecondary)
                         }
                     } header: {
                         Text("About")
-                            .font(.system(size: 13, weight: .medium))
+                            .font(Theme.Typography.subheadline)
                     }
                 }
                 .listStyle(.insetGrouped)
@@ -210,7 +220,7 @@ struct SettingsView: View {
                 .frame(width: 28)
 
             Text("Daily Reminder")
-                .font(.system(size: 15))
+                .font(Theme.Typography.body)
                 .foregroundColor(.textPrimary)
 
             Spacer()
@@ -219,10 +229,12 @@ struct SettingsView: View {
                 .labelsHidden()
                 .colorScheme(.light)
         }
+        .accessibilityLabel("Daily reminder time")
     }
 
     private var notificationDeniedRow: some View {
         Button {
+            HapticManager.light()
             if let url = URL(string: UIApplication.openSettingsURLString) {
                 UIApplication.shared.open(url)
             }
@@ -234,10 +246,10 @@ struct SettingsView: View {
 
                 VStack(alignment: .leading, spacing: 2) {
                     Text("Notifications disabled")
-                        .font(.system(size: 15))
+                        .font(Theme.Typography.body)
                         .foregroundColor(.textPrimary)
                     Text("Tap to enable in Settings")
-                        .font(.system(size: 12))
+                        .font(Theme.Typography.sm)
                         .foregroundColor(.textSecondary)
                 }
 
@@ -248,6 +260,8 @@ struct SettingsView: View {
                     .foregroundColor(.textSecondary.opacity(0.5))
             }
         }
+        .accessibilityLabel("Notifications disabled")
+        .accessibilityHint("Opens Settings app to enable notifications")
     }
 
     private var calendarSyncRow: some View {
@@ -257,7 +271,7 @@ struct SettingsView: View {
                 .frame(width: 28)
 
             Text("Calendar Sync")
-                .font(.system(size: 15))
+                .font(Theme.Typography.body)
                 .foregroundColor(.textPrimary)
 
             Spacer()
@@ -266,6 +280,7 @@ struct SettingsView: View {
                 Toggle("", isOn: Binding(
                     get: { calendarService.syncEnabled },
                     set: { newValue in
+                        HapticManager.selection()
                         if newValue {
                             calendarService.syncAllVitaminReminders()
                         } else {
@@ -277,14 +292,16 @@ struct SettingsView: View {
                 .tint(.accentGreen)
             } else {
                 Button("Enable") {
+                    HapticManager.medium()
                     Task {
                         _ = await calendarService.requestAccess()
                     }
                 }
-                .font(.system(size: 13, weight: .medium))
+                .font(Theme.Typography.sm)
                 .foregroundColor(.accentGreen)
             }
         }
+        .accessibilityLabel("Calendar sync")
     }
 
     private var travelDetectionRow: some View {
@@ -295,15 +312,15 @@ struct SettingsView: View {
 
             VStack(alignment: .leading, spacing: 2) {
                 Text("Travel Detection")
-                    .font(.system(size: 15))
+                    .font(Theme.Typography.body)
                     .foregroundColor(.textPrimary)
                 if !calendarService.travelDetectionEnabled && calendarService.detectedTravelDates.isEmpty {
                     Text("Skip reminders when traveling")
-                        .font(.system(size: 12))
+                        .font(Theme.Typography.sm)
                         .foregroundColor(.textSecondary)
                 } else if !calendarService.detectedTravelDates.isEmpty {
                     Text("\(calendarService.detectedTravelDates.count) travel period\(calendarService.detectedTravelDates.count == 1 ? "" : "s") detected")
-                        .font(.system(size: 12))
+                        .font(Theme.Typography.sm)
                         .foregroundColor(.accentGreen)
                 }
             }
@@ -313,6 +330,7 @@ struct SettingsView: View {
             Toggle("", isOn: Binding(
                 get: { calendarService.travelDetectionEnabled },
                 set: { newValue in
+                    HapticManager.selection()
                     calendarService.travelDetectionEnabled = newValue
                     if newValue {
                         calendarService.detectTravelPeriods()
@@ -324,6 +342,7 @@ struct SettingsView: View {
             .tint(.accentGreen)
             .disabled(!calendarService.isAuthorized)
         }
+        .accessibilityLabel("Travel detection")
     }
 
     private func loadVitamins() {
@@ -337,8 +356,10 @@ struct SettingsView: View {
     private func deleteVitamin(id: Int64) {
         do {
             try databaseService.deleteVitamin(id: id)
+            HapticManager.success()
             loadVitamins()
         } catch {
+            HapticManager.error()
             print("Delete error: \(error)")
         }
     }
@@ -364,14 +385,15 @@ struct VitaminRow: View {
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(vitamin.name)
-                    .font(.system(size: 15, weight: .medium))
+                    .font(Theme.Typography.bodyMedium)
                     .foregroundColor(.textPrimary)
                 Text(vitamin.dosage)
-                    .font(.system(size: 13))
+                    .font(Theme.Typography.sm)
                     .foregroundColor(.textSecondary)
             }
         }
         .padding(.vertical, 4)
+        .accessibilityLabel("\(vitamin.pillEmoji) \(vitamin.name), \(vitamin.dosage)")
     }
 }
 

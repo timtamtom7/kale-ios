@@ -156,7 +156,7 @@ struct FamilyManagementView: View {
         .frame(maxWidth: .infinity)
         .padding(.vertical, 24)
         .background(
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                 .fill(Color.surfaceLight)
         )
     }
@@ -201,7 +201,7 @@ struct FamilyManagementView: View {
                             .padding(.vertical, 12)
                             .padding(.horizontal, 16)
                             .background(Color.accentGreen.opacity(0.08))
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .clipShape(RoundedRectangle(cornerRadius: Theme.CornerRadius.sm))
 
                         Spacer()
 
@@ -220,7 +220,7 @@ struct FamilyManagementView: View {
             }
             .padding(16)
             .background(
-                RoundedRectangle(cornerRadius: 16)
+                RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                     .fill(Color.surfaceLight)
             )
         }
@@ -234,7 +234,7 @@ struct FamilyManagementView: View {
 
             FamilyComparisonView()
                 .background(
-                    RoundedRectangle(cornerRadius: 16)
+                    RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                         .fill(Color.surfaceLight)
                 )
         }
@@ -337,7 +337,7 @@ struct FamilyMemberCard: View {
         }
         .padding(14)
         .background(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: Theme.CornerRadius.md)
                 .fill(Color.surfaceLight)
         )
     }
@@ -397,7 +397,7 @@ struct AddFamilyMemberView: View {
                                 .font(.system(size: 15))
                                 .padding(12)
                                 .background(Color.surfaceLight)
-                                .cornerRadius(12)
+                                .cornerRadius(Theme.CornerRadius.md)
                         }
 
                         Spacer()

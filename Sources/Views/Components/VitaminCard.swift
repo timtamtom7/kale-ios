@@ -15,6 +15,7 @@ struct VitaminCard: View {
                 animateCheck = true
                 scale = 1.04
             }
+            HapticManager.medium()
             onToggle()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
                 withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
@@ -28,14 +29,14 @@ struct VitaminCard: View {
                 VStack(alignment: .leading, spacing: 2) {
                     HStack(spacing: 6) {
                         Text(vitamin.name)
-                            .font(.system(size: 15, weight: .medium))
+                            .font(Theme.Typography.bodyMedium)
                             .foregroundColor(isTaken ? .white : .textPrimary)
                         if vitamin.stockCount != nil {
                             stockIndicator
                         }
                     }
                     Text(vitamin.dosage)
-                        .font(.system(size: 13))
+                        .font(Theme.Typography.sm)
                         .foregroundColor(isTaken ? .white.opacity(0.8) : .textSecondary)
                 }
                 Spacer()
@@ -45,17 +46,20 @@ struct VitaminCard: View {
             .padding(.horizontal, 16)
             .padding(.vertical, 14)
             .background(
-                RoundedRectangle(cornerRadius: 16)
+                RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                     .fill(isTaken ? Color.accentGreen : Color.surfaceLight)
                     .shadow(color: Color.black.opacity(isTaken ? 0.05 : 0.08), radius: 8, x: 0, y: 4)
             )
             .overlay(
-                RoundedRectangle(cornerRadius: 16)
+                RoundedRectangle(cornerRadius: Theme.CornerRadius.lg)
                     .stroke(isTaken ? Color.accentGreen.opacity(0.3) : Color.inactiveEmpty.opacity(0.5), lineWidth: 1)
             )
             .scaleEffect(scale)
         }
         .buttonStyle(.plain)
+        .accessibilityLabel("\(vitamin.name), \(vitamin.dosage), \(isTaken ? "taken" : "not taken")")
+        .accessibilityHint("Double tap to \(isTaken ? "mark as not taken" : "mark as taken")")
+        .accessibilityAddTraits(.isButton)
         .simultaneousGesture(
             TapGesture()
                 .onEnded { _ in
@@ -95,6 +99,7 @@ struct VitaminCard: View {
 
     private var historyChevron: some View {
         Button {
+            HapticManager.light()
             onTap?()
         } label: {
             Image(systemName: "chevron.right")
@@ -102,6 +107,7 @@ struct VitaminCard: View {
                 .foregroundColor(isTaken ? Color.white.opacity(0.6) : Color.textSecondary.opacity(0.5))
         }
         .buttonStyle(.plain)
+        .accessibilityLabel("View history for \(vitamin.name)")
     }
 
     private var stockIndicator: some View {
