@@ -53,6 +53,7 @@
 		CB255028FDEE13AD1156619B /* FamilyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3981A744BBA7EF18945EBB /* FamilyService.swift */; };
 		DE18F3DF5745AB6D32E1B6B1 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A94C2DE1F114FDEA398ECE /* Theme.swift */; };
 		E0355A6B4C9DBEF1E3F1F453 /* AddVitaminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5947751A8E3891760751F69D /* AddVitaminView.swift */; };
+		E53E098CBFA7555C0F8056F1 /* HouseholdMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269FE89B66579FDBFD27004C /* HouseholdMealView.swift */; };
 		EAA887D28376EF76D260024D /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF98F8A31C266323583A41 /* CalendarService.swift */; };
 		EB79793A066AAC98265C5367 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C083E61EA3CC0036FAD13A /* ContentView.swift */; };
 		EC15FF474779126ACE75481D /* KaleWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CCBA62A26FD8BD739DAE0F /* KaleWidgetBundle.swift */; };
@@ -90,6 +91,7 @@
 		09671F9B108BE37E8F9EA81B /* DailyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLog.swift; sourceTree = "<group>"; };
 		19BA6E2EF7E97BC859B16757 /* BarcodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeService.swift; sourceTree = "<group>"; };
 		19E69B74C6B1770D6CE70C8A /* MonthlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyView.swift; sourceTree = "<group>"; };
+		269FE89B66579FDBFD27004C /* HouseholdMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseholdMealView.swift; sourceTree = "<group>"; };
 		28E1A7C21E6CEC1B5589F522 /* KaleMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleMacApp.swift; sourceTree = "<group>"; };
 		2C3981A744BBA7EF18945EBB /* FamilyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyService.swift; sourceTree = "<group>"; };
 		2D430787F7AC89FD1B9DFA6B /* KaleR12R20.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleR12R20.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 			children = (
 				B9C083E61EA3CC0036FAD13A /* ContentView.swift */,
 				B1E78D967559DDD2C4F5BB0C /* GroceryListView.swift */,
+				269FE89B66579FDBFD27004C /* HouseholdMealView.swift */,
 				28E1A7C21E6CEC1B5589F522 /* KaleMacApp.swift */,
 				62CB4D5F62396C13CB8FB747 /* Models.swift */,
 				7F321D07AA11886701EA4BBD /* NutritionAnalysisView.swift */,
@@ -562,6 +565,7 @@
 			files = (
 				EB79793A066AAC98265C5367 /* ContentView.swift in Sources */,
 				CAA55B56896C6B2F72779124 /* GroceryListView.swift in Sources */,
+				E53E098CBFA7555C0F8056F1 /* HouseholdMealView.swift in Sources */,
 				02E424730252B4B671CCFC5E /* KaleMacApp.swift in Sources */,
 				9CDA8F7592404C340DC61D36 /* Models.swift in Sources */,
 				6EC5178943FA5087BC4B6C9F /* NutritionAnalysisView.swift in Sources */,
