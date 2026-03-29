@@ -1,0 +1,23 @@
+name: KaleMac
+options:
+  bundleIdPrefix: com.tommaso
+  deploymentTarget:
+    macOS: "15.0"
+targets:
+  KaleMac:
+    type: application
+    platform: macOS
+    sources:
+      - path: KaleMac
+        excludes:
+          - "*.md"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.tommaso.kale.mac
+        PRODUCT_NAME: Kale
+        INFOPLIST_FILE: KaleMac/Info.plist
+        SWIFT_VERSION: "6.0"
+        MACOSX_DEPLOYMENT_TARGET: "15.0"
+        CODE_SIGN_IDENTITY: "-"
+        CODE_SIGN_STYLE: Manual
+        ENABLE_HARDENED_RUNTIME: YES

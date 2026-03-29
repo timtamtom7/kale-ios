@@ -10,7 +10,6 @@
 		01D7755129FD1A0411608CD8 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679ABDAE75B1BE836AD2CF93 /* NotificationService.swift */; };
 		02E424730252B4B671CCFC5E /* KaleMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1A7C21E6CEC1B5589F522 /* KaleMacApp.swift */; };
 		0B91FF992108FBF8F286E434 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5231358D43AE5A2BAD452473 /* TodayView.swift */; };
-		117E1FCBBE6C977CDA65D9CF /* MacKaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2536B7E9B7BF3F21C40ABD7F /* MacKaleView.swift */; };
 		150F5F87D1A7F8B4D8AB23EE /* VitaminHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BE344194ED5DAC0AB09B0B /* VitaminHistoryView.swift */; };
 		188C1F3E76311711E97CC41D /* Vitamin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073247B7C18866170D14B6EF /* Vitamin.swift */; };
 		19A86739BBAF37B4EFAC0162 /* AppStoreContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CAA1517857CBA0C8E4E43E /* AppStoreContent.swift */; };
@@ -22,10 +21,12 @@
 		39E4A9270F3B85AC15A639B3 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80EC5A66D727A7DCD84C9C6 /* DatabaseService.swift */; };
 		3C9E0458ADEE15BB65B66191 /* InteractionHints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C28C4DB62AAEDE752BE866C /* InteractionHints.swift */; };
 		3D669CD0099F8B805BB39FD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D17498D844C152870E6895 /* ContentView.swift */; };
+		401B0E395E7D5185051E8EE1 /* RecipeLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FA8D00EAC2C42CF51380D6 /* RecipeLibraryView.swift */; };
 		45B43B9576926456A4275FC9 /* DailyLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09671F9B108BE37E8F9EA81B /* DailyLog.swift */; };
 		48A3253748DC3B886AAE7BAB /* InteractionHintToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40572970EA27E5F51978200D /* InteractionHintToast.swift */; };
 		5C505A971A0B1B7C2507BCFB /* PricingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA168765C2B22C19C1257F3F /* PricingView.swift */; };
 		634572440EFA73DC01D8351E /* VitaminIntelligenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D803C9256B1275704BCA2230 /* VitaminIntelligenceService.swift */; };
+		663774F1C88ABEEEED1A7A6A /* NutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADE85BF994054621ADC3DB1 /* NutritionView.swift */; };
 		6845A7919A3AD4B5EF2C328A /* BarcodeDatabase.json in Resources */ = {isa = PBXBuildFile; fileRef = CE5962FB7D5DDE73CD9336EC /* BarcodeDatabase.json */; };
 		6BE671A5AD65CB3F05E65E9E /* KaleR12R20Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DBC13767B362378A00166F /* KaleR12R20Service.swift */; };
 		6CAB1696B44A6D8A15EA2CD0 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DCF100EC88ACDA67078D7C /* EventKit.framework */; };
@@ -36,19 +37,23 @@
 		9665DE79F1C787F3F5AB2533 /* ErrorStateViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BA85C371BC82EF87930180 /* ErrorStateViews.swift */; };
 		98A2153FE406ED6FA700F371 /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF97241F7346EBD55F95FC0 /* SubscriptionManager.swift */; };
 		99DC0EC08288505DAF646A1B /* KaleWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC061D59370BB7DD44D78B6 /* KaleWidget.swift */; };
+		9CDA8F7592404C340DC61D36 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CB4D5F62396C13CB8FB747 /* Models.swift */; };
 		9DBBB1602FE844F284B9126E /* VitaminCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C4F9331E9675687551D4DB /* VitaminCard.swift */; };
 		A32CCE2BBDAF05CD6AFA097E /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08328FB908B5E5A24FCD2AC0 /* CommunityView.swift */; };
 		A6905A3878AE27ED7EB8B15D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75E6F605B0BEDBACDBDD565 /* OnboardingView.swift */; };
 		A96776594D7A375B4AF78333 /* BarcodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BA6E2EF7E97BC859B16757 /* BarcodeService.swift */; };
+		B29FC1F2161F70F446B365B0 /* WeeklyPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC01F39E5102FCDB22484D1 /* WeeklyPlanView.swift */; };
+		B6BB9F592569DB02A6C37F27 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6539D9B7A3920D4A4EC625 /* Theme.swift */; };
 		BA4185F61B0D05C4480B63CB /* MonthlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E69B74C6B1770D6CE70C8A /* MonthlyView.swift */; };
 		BC941A5D1AC6B35476052E16 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = B5994D9444CAE64EC4FEB9F3 /* SQLite */; };
 		BDD58ED920CE154CCEA7AB4D /* FamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241BE14F284A495E0D7AA64 /* FamilyMember.swift */; };
 		C23A61ED7A2C5E6BE8B3D841 /* SmartReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06232DDD5AA3F625FE220783 /* SmartReminderService.swift */; };
-		CA351A599436C20ECFCC5337 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 292504F60975114BE2AE8DC6 /* SQLite */; };
+		CAA55B56896C6B2F72779124 /* GroceryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E78D967559DDD2C4F5BB0C /* GroceryListView.swift */; };
 		CB255028FDEE13AD1156619B /* FamilyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3981A744BBA7EF18945EBB /* FamilyService.swift */; };
 		DE18F3DF5745AB6D32E1B6B1 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A94C2DE1F114FDEA398ECE /* Theme.swift */; };
 		E0355A6B4C9DBEF1E3F1F453 /* AddVitaminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5947751A8E3891760751F69D /* AddVitaminView.swift */; };
 		EAA887D28376EF76D260024D /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DF98F8A31C266323583A41 /* CalendarService.swift */; };
+		EB79793A066AAC98265C5367 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C083E61EA3CC0036FAD13A /* ContentView.swift */; };
 		EC15FF474779126ACE75481D /* KaleWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CCBA62A26FD8BD739DAE0F /* KaleWidgetBundle.swift */; };
 		F4E5C029063A3BF1DB6786DA /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA64560B0286C658EFB62FA9 /* ColorExtensions.swift */; };
 		F7CAF5D504DD280FB455C4CD /* HealthInsightsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15F7865D55A1A3D9133B563 /* HealthInsightsService.swift */; };
@@ -84,7 +89,6 @@
 		09671F9B108BE37E8F9EA81B /* DailyLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyLog.swift; sourceTree = "<group>"; };
 		19BA6E2EF7E97BC859B16757 /* BarcodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeService.swift; sourceTree = "<group>"; };
 		19E69B74C6B1770D6CE70C8A /* MonthlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyView.swift; sourceTree = "<group>"; };
-		2536B7E9B7BF3F21C40ABD7F /* MacKaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacKaleView.swift; sourceTree = "<group>"; };
 		28E1A7C21E6CEC1B5589F522 /* KaleMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleMacApp.swift; sourceTree = "<group>"; };
 		2C3981A744BBA7EF18945EBB /* FamilyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyService.swift; sourceTree = "<group>"; };
 		2D430787F7AC89FD1B9DFA6B /* KaleR12R20.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleR12R20.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 		5264211AA28D096CE07E0E4F /* AISupplementInsights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AISupplementInsights.swift; sourceTree = "<group>"; };
 		52D17498D844C152870E6895 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5947751A8E3891760751F69D /* AddVitaminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVitaminView.swift; sourceTree = "<group>"; };
+		62CB4D5F62396C13CB8FB747 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		64EC4AB6B19E4CA6D2590EE7 /* KaleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleApp.swift; sourceTree = "<group>"; };
 		65DBC13767B362378A00166F /* KaleR12R20Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleR12R20Service.swift; sourceTree = "<group>"; };
 		679ABDAE75B1BE836AD2CF93 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
@@ -118,35 +123,33 @@
 		92003D2D18100B6708072A02 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		99CCBA62A26FD8BD739DAE0F /* KaleWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleWidgetBundle.swift; sourceTree = "<group>"; };
 		9B4D13F1230773B4929BFA20 /* Kale.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Kale.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FC01F39E5102FCDB22484D1 /* WeeklyPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyPlanView.swift; sourceTree = "<group>"; };
 		A1C4F9331E9675687551D4DB /* VitaminCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminCard.swift; sourceTree = "<group>"; };
 		A8A94C2DE1F114FDEA398ECE /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		AA168765C2B22C19C1257F3F /* PricingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricingView.swift; sourceTree = "<group>"; };
+		B1E78D967559DDD2C4F5BB0C /* GroceryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListView.swift; sourceTree = "<group>"; };
 		B497F4E3F0DAC04B5FF86B8D /* KaleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleTests.swift; sourceTree = "<group>"; };
 		B75E6F605B0BEDBACDBDD565 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		B9C083E61EA3CC0036FAD13A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BA64560B0286C658EFB62FA9 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		BAC484326A44D590575C3155 /* KaleMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaleMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3FA8D00EAC2C42CF51380D6 /* RecipeLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeLibraryView.swift; sourceTree = "<group>"; };
 		CB3B4469FA47726D2B49405C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CE5962FB7D5DDE73CD9336EC /* BarcodeDatabase.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BarcodeDatabase.json; sourceTree = "<group>"; };
 		CF1341227DFA5E5D0F87DBDB /* KaleTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = KaleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D15F7865D55A1A3D9133B563 /* HealthInsightsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthInsightsService.swift; sourceTree = "<group>"; };
 		D803C9256B1275704BCA2230 /* VitaminIntelligenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminIntelligenceService.swift; sourceTree = "<group>"; };
 		D9C88F29AFCE74DE003FD6FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DB6539D9B7A3920D4A4EC625 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DF79BF830187B3A3DD5DC2C3 /* WidgetDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetDataService.swift; sourceTree = "<group>"; };
 		E07F5DADA3DDB5F5A44367EF /* FamilyComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyComparisonView.swift; sourceTree = "<group>"; };
 		E80EC5A66D727A7DCD84C9C6 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		EADE85BF994054621ADC3DB1 /* NutritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionView.swift; sourceTree = "<group>"; };
 		EFED90B983FD838902EBC4DA /* KaleMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KaleMac.entitlements; sourceTree = "<group>"; };
 		F5BE344194ED5DAC0AB09B0B /* VitaminHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VitaminHistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B445FAF06B595FC49F08B1AC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CA351A599436C20ECFCC5337 /* SQLite in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C3CC0CEA9C1E1646D6E88FA7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -324,8 +327,14 @@
 		7F65AF5A60B9CFE54271FC60 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B9C083E61EA3CC0036FAD13A /* ContentView.swift */,
+				B1E78D967559DDD2C4F5BB0C /* GroceryListView.swift */,
 				28E1A7C21E6CEC1B5589F522 /* KaleMacApp.swift */,
-				2536B7E9B7BF3F21C40ABD7F /* MacKaleView.swift */,
+				62CB4D5F62396C13CB8FB747 /* Models.swift */,
+				EADE85BF994054621ADC3DB1 /* NutritionView.swift */,
+				C3FA8D00EAC2C42CF51380D6 /* RecipeLibraryView.swift */,
+				DB6539D9B7A3920D4A4EC625 /* Theme.swift */,
+				9FC01F39E5102FCDB22484D1 /* WeeklyPlanView.swift */,
 			);
 			name = Sources;
 			path = KaleMac/Sources;
@@ -375,16 +384,12 @@
 			buildConfigurationList = 2A77DE9D5C0F34CFF15E0186 /* Build configuration list for PBXNativeTarget "KaleMac" */;
 			buildPhases = (
 				E027677762858741056EC324 /* Sources */,
-				B445FAF06B595FC49F08B1AC /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = KaleMac;
-			packageProductDependencies = (
-				292504F60975114BE2AE8DC6 /* SQLite */,
-			);
 			productName = KaleMac;
 			productReference = BAC484326A44D590575C3155 /* KaleMac.app */;
 			productType = "com.apple.product-type.application";
@@ -552,8 +557,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB79793A066AAC98265C5367 /* ContentView.swift in Sources */,
+				CAA55B56896C6B2F72779124 /* GroceryListView.swift in Sources */,
 				02E424730252B4B671CCFC5E /* KaleMacApp.swift in Sources */,
-				117E1FCBBE6C977CDA65D9CF /* MacKaleView.swift in Sources */,
+				9CDA8F7592404C340DC61D36 /* Models.swift in Sources */,
+				663774F1C88ABEEEED1A7A6A /* NutritionView.swift in Sources */,
+				401B0E395E7D5185051E8EE1 /* RecipeLibraryView.swift in Sources */,
+				B6BB9F592569DB02A6C37F27 /* Theme.swift in Sources */,
+				B29FC1F2161F70F446B365B0 /* WeeklyPlanView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -928,11 +939,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		292504F60975114BE2AE8DC6 /* SQLite */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F0B8FBA6737804824F090C5B /* XCRemoteSwiftPackageReference "SQLite.swift" */;
-			productName = SQLite;
-		};
 		B5994D9444CAE64EC4FEB9F3 /* SQLite */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F0B8FBA6737804824F090C5B /* XCRemoteSwiftPackageReference "SQLite.swift" */;

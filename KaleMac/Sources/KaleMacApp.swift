@@ -1,19 +1,19 @@
-import Cocoa
 import SwiftUI
 
 @main
 struct KaleMacApp: App {
     var body: some Scene {
         WindowGroup {
-            MacKaleView()
-                .frame(minWidth: 800, minHeight: 600)
-                .darkMode()
+            ContentView()
+                .frame(minWidth: 900, minHeight: 700)
         }
-    }
-}
-
-extension View {
-    func darkMode() -> some View {
-        self.preferredColorScheme(.dark)
+        .windowStyle(.hiddenTitleBar)
+        .commands {
+            CommandGroup(replacing: .help) {
+                Button("About Kale") {
+                    NSApplication.shared.orderFrontStandardAboutPanel(nil)
+                }
+            }
+        }
     }
 }

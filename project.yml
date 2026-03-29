@@ -107,8 +107,6 @@ targets:
         ENABLE_HARDENED_RUNTIME: "NO"
         COMBINE_HIDPI_IMAGES: "YES"
         MACOSX_DEPLOYMENT_TARGET: "14.0"
-    dependencies:
-      - package: SQLite
     entitlements:
       path: KaleMac/Resources/KaleMac.entitlements
       properties:
