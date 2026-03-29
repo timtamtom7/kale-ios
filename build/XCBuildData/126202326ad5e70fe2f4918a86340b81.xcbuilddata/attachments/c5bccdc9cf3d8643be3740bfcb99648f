@@ -1,0 +1,89 @@
+{
+  "" : {
+    "diagnostics" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/KaleMac-primary.dia",
+    "emit-module-dependencies" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/KaleMac-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/KaleMac-primary-emit-module.dia",
+    "pch" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/KaleMac-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/KaleMac-primary.swiftdeps"
+  },
+  "/Users/mauriello/.openclaw/workspace/projects/kale-ios/KaleMac/Sources/ContentView.swift" : {
+    "const-values" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/ContentView.d",
+    "diagnostics" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/ContentView.dia",
+    "index-unit-output-path" : "/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/ContentView.o",
+    "llvm-bc" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/ContentView.bc",
+    "object" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/ContentView.o",
+    "swift-dependencies" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/ContentView~partial.swiftmodule"
+  },
+  "/Users/mauriello/.openclaw/workspace/projects/kale-ios/KaleMac/Sources/GroceryListView.swift" : {
+    "const-values" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/GroceryListView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/GroceryListView.d",
+    "diagnostics" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/GroceryListView.dia",
+    "index-unit-output-path" : "/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/GroceryListView.o",
+    "llvm-bc" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/GroceryListView.bc",
+    "object" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/GroceryListView.o",
+    "swift-dependencies" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/GroceryListView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/GroceryListView~partial.swiftmodule"
+  },
+  "/Users/mauriello/.openclaw/workspace/projects/kale-ios/KaleMac/Sources/KaleMacApp.swift" : {
+    "const-values" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/KaleMacApp.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/KaleMacApp.d",
+    "diagnostics" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/KaleMacApp.dia",
+    "index-unit-output-path" : "/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/KaleMacApp.o",
+    "llvm-bc" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/KaleMacApp.bc",
+    "object" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/KaleMacApp.o",
+    "swift-dependencies" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/KaleMacApp.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/KaleMacApp~partial.swiftmodule"
+  },
+  "/Users/mauriello/.openclaw/workspace/projects/kale-ios/KaleMac/Sources/Models.swift" : {
+    "const-values" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/Models.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/Models.d",
+    "diagnostics" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/Models.dia",
+    "index-unit-output-path" : "/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/Models.o",
+    "llvm-bc" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/Models.bc",
+    "object" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/Models.o",
+    "swift-dependencies" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/Models.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/Models~partial.swiftmodule"
+  },
+  "/Users/mauriello/.openclaw/workspace/projects/kale-ios/KaleMac/Sources/NutritionView.swift" : {
+    "const-values" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/NutritionView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/NutritionView.d",
+    "diagnostics" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/NutritionView.dia",
+    "index-unit-output-path" : "/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/NutritionView.o",
+    "llvm-bc" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/NutritionView.bc",
+    "object" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/NutritionView.o",
+    "swift-dependencies" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/NutritionView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/NutritionView~partial.swiftmodule"
+  },
+  "/Users/mauriello/.openclaw/workspace/projects/kale-ios/KaleMac/Sources/RecipeLibraryView.swift" : {
+    "const-values" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/RecipeLibraryView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/RecipeLibraryView.d",
+    "diagnostics" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/RecipeLibraryView.dia",
+    "index-unit-output-path" : "/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/RecipeLibraryView.o",
+    "llvm-bc" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/RecipeLibraryView.bc",
+    "object" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/RecipeLibraryView.o",
+    "swift-dependencies" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/RecipeLibraryView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/RecipeLibraryView~partial.swiftmodule"
+  },
+  "/Users/mauriello/.openclaw/workspace/projects/kale-ios/KaleMac/Sources/Theme.swift" : {
+    "const-values" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/Theme.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/Theme.d",
+    "diagnostics" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/Theme.dia",
+    "index-unit-output-path" : "/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/Theme.o",
+    "llvm-bc" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/Theme.bc",
+    "object" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/Theme.o",
+    "swift-dependencies" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/Theme.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/Theme~partial.swiftmodule"
+  },
+  "/Users/mauriello/.openclaw/workspace/projects/kale-ios/KaleMac/Sources/WeeklyPlanView.swift" : {
+    "const-values" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/WeeklyPlanView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/WeeklyPlanView.d",
+    "diagnostics" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/WeeklyPlanView.dia",
+    "index-unit-output-path" : "/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/WeeklyPlanView.o",
+    "llvm-bc" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/WeeklyPlanView.bc",
+    "object" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/WeeklyPlanView.o",
+    "swift-dependencies" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/WeeklyPlanView.swiftdeps",
+    "swiftmodule" : "/Users/mauriello/.openclaw/workspace/projects/kale-ios/build/Kale.build/Debug/KaleMac.build/Objects-normal/x86_64/WeeklyPlanView~partial.swiftmodule"
+  }
+}

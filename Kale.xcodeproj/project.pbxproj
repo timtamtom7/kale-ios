@@ -31,6 +31,7 @@
 		6BE671A5AD65CB3F05E65E9E /* KaleR12R20Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DBC13767B362378A00166F /* KaleR12R20Service.swift */; };
 		6CAB1696B44A6D8A15EA2CD0 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DCF100EC88ACDA67078D7C /* EventKit.framework */; };
 		6E1922D2700EF88EF8F57F3A /* HealthInsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BBD1DA6B963CF3454A7DA /* HealthInsightsView.swift */; };
+		6EC5178943FA5087BC4B6C9F /* NutritionAnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F321D07AA11886701EA4BBD /* NutritionAnalysisView.swift */; };
 		7FE3CCD0ECC9389DF3160D6D /* FamilyComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07F5DADA3DDB5F5A44367EF /* FamilyComparisonView.swift */; };
 		80CFB490DA55AE3A7D714BAB /* KaleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EC4AB6B19E4CA6D2590EE7 /* KaleApp.swift */; };
 		87F31DD5E31AF8DDABF39B94 /* WidgetDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF79BF830187B3A3DD5DC2C3 /* WidgetDataService.swift */; };
@@ -117,6 +118,7 @@
 		7653916B07A8E9A6E69229C0 /* KaleWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KaleWidget.entitlements; sourceTree = "<group>"; };
 		77CAA1517857CBA0C8E4E43E /* AppStoreContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreContent.swift; sourceTree = "<group>"; };
 		786BBD1DA6B963CF3454A7DA /* HealthInsightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthInsightsView.swift; sourceTree = "<group>"; };
+		7F321D07AA11886701EA4BBD /* NutritionAnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionAnalysisView.swift; sourceTree = "<group>"; };
 		82DF98F8A31C266323583A41 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
 		841F3497490BF34D79E0C950 /* Kale.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kale.entitlements; sourceTree = "<group>"; };
 		848CF8E47C17E679E71B3BA7 /* CommunityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityService.swift; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				B1E78D967559DDD2C4F5BB0C /* GroceryListView.swift */,
 				28E1A7C21E6CEC1B5589F522 /* KaleMacApp.swift */,
 				62CB4D5F62396C13CB8FB747 /* Models.swift */,
+				7F321D07AA11886701EA4BBD /* NutritionAnalysisView.swift */,
 				EADE85BF994054621ADC3DB1 /* NutritionView.swift */,
 				C3FA8D00EAC2C42CF51380D6 /* RecipeLibraryView.swift */,
 				DB6539D9B7A3920D4A4EC625 /* Theme.swift */,
@@ -561,6 +564,7 @@
 				CAA55B56896C6B2F72779124 /* GroceryListView.swift in Sources */,
 				02E424730252B4B671CCFC5E /* KaleMacApp.swift in Sources */,
 				9CDA8F7592404C340DC61D36 /* Models.swift in Sources */,
+				6EC5178943FA5087BC4B6C9F /* NutritionAnalysisView.swift in Sources */,
 				663774F1C88ABEEEED1A7A6A /* NutritionView.swift in Sources */,
 				401B0E395E7D5185051E8EE1 /* RecipeLibraryView.swift in Sources */,
 				B6BB9F592569DB02A6C37F27 /* Theme.swift in Sources */,

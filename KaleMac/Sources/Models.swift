@@ -208,3 +208,27 @@ extension Meal {
         )
     ]
 }
+
+// MARK: - Nutrition Insight
+
+struct NutritionInsight: Identifiable {
+    let id: UUID
+    let message: String
+    let severity: InsightSeverity
+    let affectedNutrient: String?
+    let suggestion: String?
+
+    init(id: UUID = UUID(), message: String, severity: InsightSeverity, affectedNutrient: String? = nil, suggestion: String? = nil) {
+        self.id = id
+        self.message = message
+        self.severity = severity
+        self.affectedNutrient = affectedNutrient
+        self.suggestion = suggestion
+    }
+}
+
+enum InsightSeverity {
+    case info
+    case warning
+    case alert
+}
