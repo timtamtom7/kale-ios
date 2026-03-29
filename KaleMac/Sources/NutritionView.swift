@@ -68,7 +68,7 @@ struct NutritionView: View {
                             NutritionRing(title: "Calories", value: averageDaily.calories, goal: 2000, unit: "", color: Theme.tomato)
                             NutritionRing(title: "Protein", value: averageDaily.protein, goal: 50, unit: "g", color: Theme.kaleGreen)
                             NutritionRing(title: "Carbs", value: averageDaily.carbs, goal: 250, unit: "g", color: Theme.avocado)
-                            NutritionRing(title: "Fat", value: averageDaily.fat, goal: 65, unit: "g", color: Color(hex: "FF9800"))
+                            NutritionRing(title: "Fat", value: averageDaily.fat, goal: 65, unit: "g", color: Theme.fatOrange)
                         }
                     }
                     .padding()
@@ -103,7 +103,7 @@ struct NutritionView: View {
                             WeeklyTotalCard(title: "Calories", value: weeklyTotals.calories, unit: "kcal", icon: "flame.fill", color: Theme.tomato)
                             WeeklyTotalCard(title: "Protein", value: weeklyTotals.protein, unit: "g", icon: "figure.strengthtraining.traditional", color: Theme.kaleGreen)
                             WeeklyTotalCard(title: "Carbs", value: weeklyTotals.carbs, unit: "g", icon: "leaf.fill", color: Theme.avocado)
-                            WeeklyTotalCard(title: "Fat", value: weeklyTotals.fat, unit: "g", icon: "drop.fill", color: Color(hex: "FF9800"))
+                            WeeklyTotalCard(title: "Fat", value: weeklyTotals.fat, unit: "g", icon: "drop.fill", color: Theme.fatOrange)
                         }
                     }
                     .padding()
@@ -196,7 +196,7 @@ struct DailyNutritionRow: View {
                     NutrientBadge(value: nutrition.calories, unit: "", color: Theme.tomato)
                     NutrientBadge(value: nutrition.protein, unit: "g P", color: Theme.kaleGreen)
                     NutrientBadge(value: nutrition.carbs, unit: "g C", color: Theme.avocado)
-                    NutrientBadge(value: nutrition.fat, unit: "g F", color: Color(hex: "FF9800"))
+                    NutrientBadge(value: nutrition.fat, unit: "g F", color: Theme.fatOrange)
                 }
             } else {
                 Text("No data")

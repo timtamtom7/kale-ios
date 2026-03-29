@@ -125,7 +125,7 @@ struct NutritionAnalysisView: View {
                     MacroRing(title: "Calories", value: averageDaily.calories, goal: calorieGoal, unit: "kcal", color: Theme.tomato, icon: "flame.fill")
                     MacroRing(title: "Protein", value: averageDaily.protein, goal: proteinGoal, unit: "g", color: Theme.kaleGreen, icon: "figure.strengthtraining.traditional")
                     MacroRing(title: "Carbs", value: averageDaily.carbs, goal: carbsGoal, unit: "g", color: Theme.avocado, icon: "leaf.fill")
-                    MacroRing(title: "Fat", value: averageDaily.fat, goal: fatGoal, unit: "g", color: Color(hex: "FF9800"), icon: "drop.fill")
+                    MacroRing(title: "Fat", value: averageDaily.fat, goal: fatGoal, unit: "g", color: Theme.fatOrange, icon: "drop.fill")
                 }
             }
             .padding()
@@ -142,7 +142,7 @@ struct NutritionAnalysisView: View {
                 HStack(spacing: 0) {
                     MacroBarSlice(value: weeklyTotals.protein * 4, total: weeklyTotals.calories, color: Theme.kaleGreen, label: "Protein")
                     MacroBarSlice(value: weeklyTotals.carbs * 4, total: weeklyTotals.calories, color: Theme.avocado, label: "Carbs")
-                    MacroBarSlice(value: weeklyTotals.fat * 9, total: weeklyTotals.calories, color: Color(hex: "FF9800"), label: "Fat")
+                    MacroBarSlice(value: weeklyTotals.fat * 9, total: weeklyTotals.calories, color: Theme.fatOrange, label: "Fat")
                 }
                 .frame(height: 32)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
@@ -150,7 +150,7 @@ struct NutritionAnalysisView: View {
                 HStack(spacing: 24) {
                     MacroLegend(color: Theme.kaleGreen, label: "Protein", value: "\(weeklyTotals.protein)g", cals: "\(weeklyTotals.protein * 4) cal")
                     MacroLegend(color: Theme.avocado, label: "Carbs", value: "\(weeklyTotals.carbs)g", cals: "\(weeklyTotals.carbs * 4) cal")
-                    MacroLegend(color: Color(hex: "FF9800"), label: "Fat", value: "\(weeklyTotals.fat)g", cals: "\(weeklyTotals.fat * 9) cal")
+                    MacroLegend(color: Theme.fatOrange, label: "Fat", value: "\(weeklyTotals.fat)g", cals: "\(weeklyTotals.fat * 9) cal")
                 }
                 .font(.caption)
             }
@@ -466,7 +466,7 @@ struct AnalysisDailyRow: View {
                 TrendNutrientBadge(value: nutrition.calories, unit: "", color: Theme.tomato)
                 TrendNutrientBadge(value: nutrition.protein, unit: "g", color: Theme.kaleGreen)
                 TrendNutrientBadge(value: nutrition.carbs, unit: "g", color: Theme.avocado)
-                TrendNutrientBadge(value: nutrition.fat, unit: "g", color: Color(hex: "FF9800"))
+                TrendNutrientBadge(value: nutrition.fat, unit: "g", color: Theme.fatOrange)
             }
         }
         .padding(.vertical, 8)

@@ -5,6 +5,7 @@ enum Theme {
     static let avocado = Color(hex: "9ABC66")
     static let cream = Color(hex: "F5F5DC")
     static let tomato = Color(hex: "E64A19")
+    static let fatOrange = Color(hex: "FF9800")
     static let surface = Color(hex: "FAFAFA")
     static let cardBg = Color(hex: "FFFFFF")
 
