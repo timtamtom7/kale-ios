@@ -9,7 +9,7 @@ actor AISupplementInsights {
 
     // MARK: - Known Interactions
 
-    struct SupplementInteraction: Identifiable {
+    struct InteractionPair: Identifiable {
         let id = UUID()
         let supplementA: String
         let supplementB: String
@@ -18,29 +18,29 @@ actor AISupplementInsights {
     }
 
     /// Common supplement interactions
-    static let knownInteractions: [SupplementInteraction] = [
-        SupplementInteraction(supplementA: "Vitamin D", supplementB: "Vitamin K", effect: "Increased absorption — Vitamin K helps transport calcium", recommendation: "Take together for bone health"),
-        SupplementInteraction(supplementA: "Iron", supplementB: "Vitamin C", effect: "Vitamin C enhances non-heme iron absorption", recommendation: "Take iron with orange juice or Vitamin C"),
-        SupplementInteraction(supplementA: "Calcium", supplementB: "Iron", effect: "Calcium inhibits iron absorption", recommendation: "Take at least 2 hours apart"),
-        SupplementInteraction(supplementA: "Zinc", supplementB: "Copper", effect: "Zinc can deplete copper over time", recommendation: "Consider taking copper if on zinc long-term"),
-        SupplementInteraction(supplementA: "Vitamin E", supplementB: "Vitamin K", effect: "High-dose Vitamin E may interfere with Vitamin K", recommendation: "Monitor if taking both"),
-        SupplementInteraction(supplementA: "Magnesium", supplementB: "Calcium", effect: "Competition for absorption", recommendation: "Take at different times for optimal absorption"),
-        SupplementInteraction(supplementA: "Fish Oil", supplementB: "Vitamin D", effect: "Synergistic for heart and bone health", recommendation: "Great combination!"),
-        SupplementInteraction(supplementA: "B12", supplementB: "Folate", effect: "Work together in cell division", recommendation: "Good to pair for energy support")
+    static let interactionPairs: [InteractionPair] = [
+        InteractionPair(supplementA: "Vitamin D", supplementB: "Vitamin K", effect: "Increased absorption — Vitamin K helps transport calcium", recommendation: "Take together for bone health"),
+        InteractionPair(supplementA: "Iron", supplementB: "Vitamin C", effect: "Vitamin C enhances non-heme iron absorption", recommendation: "Take iron with orange juice or Vitamin C"),
+        InteractionPair(supplementA: "Calcium", supplementB: "Iron", effect: "Calcium inhibits iron absorption", recommendation: "Take at least 2 hours apart"),
+        InteractionPair(supplementA: "Zinc", supplementB: "Copper", effect: "Zinc can deplete copper over time", recommendation: "Consider taking copper if on zinc long-term"),
+        InteractionPair(supplementA: "Vitamin E", supplementB: "Vitamin K", effect: "High-dose Vitamin E may interfere with Vitamin K", recommendation: "Monitor if taking both"),
+        InteractionPair(supplementA: "Magnesium", supplementB: "Calcium", effect: "Competition for absorption", recommendation: "Take at different times for optimal absorption"),
+        InteractionPair(supplementA: "Fish Oil", supplementB: "Vitamin D", effect: "Synergistic for heart and bone health", recommendation: "Great combination!"),
+        InteractionPair(supplementA: "B12", supplementB: "Folate", effect: "Work together in cell division", recommendation: "Good to pair for energy support")
     ]
 
     /// Check for interactions between user's supplements
-    func detectInteractions(userSupplements: [String]) -> [SupplementInteraction] {
-        var detected: [SupplementInteraction] = []
+    func detectInteractions(userSupplements: [String]) -> [InteractionPair] {
+        var detected: [InteractionPair] = []
 
         let lowercased = Set(userSupplements.map { $0.lowercased() })
 
-        for interaction in Self.knownInteractions {
-            let aMatch = lowercased.contains(where: { $0.contains(interaction.supplementA.lowercased()) || interaction.supplementA.lowercased().contains($0) })
-            let bMatch = lowercased.contains(where: { $0.contains(interaction.supplementB.lowercased()) || interaction.supplementB.lowercased().contains($0) })
+        for pair in Self.interactionPairs {
+            let aMatch = lowercased.contains(where: { $0.contains(pair.supplementA.lowercased()) || pair.supplementA.lowercased().contains($0) })
+            let bMatch = lowercased.contains(where: { $0.contains(pair.supplementB.lowercased()) || pair.supplementB.lowercased().contains($0) })
 
             if aMatch && bMatch {
-                detected.append(interaction)
+                detected.append(pair)
             }
         }
 

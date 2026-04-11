@@ -1,0 +1,23 @@
+{
+  "/Users/mauriello/Dev/kale-ios/Sources/Services/VitaminIntelligenceService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminIntelligenceService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminIntelligenceService.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminIntelligenceService.dia",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminIntelligenceService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/VitaminIntelligenceService.swiftdeps"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Services/WidgetDataService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/WidgetDataService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/WidgetDataService.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/WidgetDataService.dia",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/WidgetDataService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/WidgetDataService.swiftdeps"
+  },
+  "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps"
+  }
+}

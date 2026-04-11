@@ -1,0 +1,30 @@
+{
+  "/Users/mauriello/Dev/kale-ios/Sources/Resources/AppStoreContent.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AppStoreContent.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AppStoreContent.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AppStoreContent.dia",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AppStoreContent.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AppStoreContent.swiftdeps"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Services/AISupplementInsights.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AISupplementInsights.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AISupplementInsights.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AISupplementInsights.dia",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AISupplementInsights.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AISupplementInsights.swiftdeps"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Services/BarcodeService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/BarcodeService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/BarcodeService.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/BarcodeService.dia",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/BarcodeService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/BarcodeService.swiftdeps"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Views/AddVitaminView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AddVitaminView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AddVitaminView.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AddVitaminView.dia",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AddVitaminView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/AddVitaminView.swiftdeps"
+  }
+}

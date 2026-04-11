@@ -1,0 +1,30 @@
+{
+  "/Users/mauriello/Dev/kale-ios/Sources/App/KaleApp.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleApp.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleApp.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleApp.dia",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleApp.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleApp.swiftdeps"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Models/KaleR12R20.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleR12R20.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleR12R20.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleR12R20.dia",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleR12R20.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleR12R20.swiftdeps"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Services/KaleR12R20Service.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleR12R20Service.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleR12R20Service.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleR12R20Service.dia",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleR12R20Service.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/KaleR12R20Service.swiftdeps"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Views/Components/LowStockAlertView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/LowStockAlertView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/LowStockAlertView.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/LowStockAlertView.dia",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/LowStockAlertView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/LowStockAlertView.swiftdeps"
+  }
+}

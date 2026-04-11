@@ -1,0 +1,102 @@
+[
+  {
+    "barcode": "0634157000085",
+    "name": "Vitamin D3",
+    "dosage": "2000 IU"
+  },
+  {
+    "barcode": "300059415145",
+    "name": "Magnesium Glycinate",
+    "dosage": "400mg"
+  },
+  {
+    "barcode": "033984001128",
+    "name": "Omega-3 Fish Oil",
+    "dosage": "1000mg"
+  },
+  {
+    "barcode": "088395600653",
+    "name": "Vitamin B12",
+    "dosage": "1000mcg"
+  },
+  {
+    "barcode": "749740700105",
+    "name": "Zinc Picolinate",
+    "dosage": "30mg"
+  },
+  {
+    "barcode": "858259002144",
+    "name": "Ashwagandha",
+    "dosage": "600mg"
+  },
+  {
+    "barcode": "849081004989",
+    "name": "Probiotics",
+    "dosage": "50B CFU"
+  },
+  {
+    "barcode": "898248001012",
+    "name": "Vitamin C",
+    "dosage": "1000mg"
+  },
+  {
+    "barcode": "088395600714",
+    "name": "Vitamin D3 + K2",
+    "dosage": "5000 IU"
+  },
+  {
+    "barcode": "856676007005",
+    "name": "Collagen Peptides",
+    "dosage": "10g"
+  },
+  {
+    "barcode": "8901234567890",
+    "name": "Multivitamin",
+    "dosage": "1 tablet"
+  },
+  {
+    "barcode": "8901234567891",
+    "name": "Vitamin E",
+    "dosage": "400 IU"
+  },
+  {
+    "barcode": "8901234567892",
+    "name": "Calcium + D3",
+    "dosage": "600mg"
+  },
+  {
+    "barcode": "8901234567893",
+    "name": "Biotin",
+    "dosage": "10000mcg"
+  },
+  {
+    "barcode": "8901234567894",
+    "name": "Melatonin",
+    "dosage": "3mg"
+  },
+  {
+    "barcode": "8901234567895",
+    "name": "Turmeric Curcumin",
+    "dosage": "500mg"
+  },
+  {
+    "barcode": "8901234567896",
+    "name": "CoQ10",
+    "dosage": "100mg"
+  },
+  {
+    "barcode": "8901234567897",
+    "name": "Elderberry",
+    "dosage": "500mg"
+  },
+  {
+    "barcode": "8901234567898",
+    "name": "Iron",
+    "dosage": "18mg"
+  },
+  {
+    "barcode": "8901234567899",
+    "name": "Vitamin B-Complex",
+    "dosage": "1 capsule"
+  }
+]

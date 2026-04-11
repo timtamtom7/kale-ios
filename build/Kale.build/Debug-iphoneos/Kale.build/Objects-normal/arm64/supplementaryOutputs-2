@@ -1,0 +1,30 @@
+{
+  "/Users/mauriello/Dev/kale-ios/Sources/App/ColorExtensions.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ColorExtensions.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ColorExtensions.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ColorExtensions.dia",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ColorExtensions.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/ColorExtensions.swiftdeps"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Services/CalendarService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CalendarService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CalendarService.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CalendarService.dia",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CalendarService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CalendarService.swiftdeps"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Services/CommunityService.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityService.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityService.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityService.dia",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityService.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityService.swiftdeps"
+  },
+  "/Users/mauriello/Dev/kale-ios/Sources/Views/CommunityView.swift" : {
+    "const-values" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityView.swiftconstvalues",
+    "dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityView.d",
+    "diagnostics" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityView.dia",
+    "object" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityView.o",
+    "swift-dependencies" : "/Users/mauriello/Dev/kale-ios/build/Kale.build/Debug-iphoneos/Kale.build/Objects-normal/arm64/CommunityView.swiftdeps"
+  }
+}
