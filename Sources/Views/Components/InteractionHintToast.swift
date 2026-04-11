@@ -71,21 +71,21 @@ struct InteractionHintToast: View {
 }
 
 struct InteractionHintService {
-    static func getHint(for vitaminName: String) -> SupplementInteraction? {
+    static func getHint(for vitaminName: String) -> SupplementHint? {
         let lowercased = vitaminName.lowercased()
-        var candidates: [SupplementInteraction] = []
+        var candidates: [SupplementHint] = []
 
-        for interaction in SupplementInteraction.allInteractions {
-            if lowercased.contains(interaction.trigger.lowercased()) {
-                candidates.append(interaction)
+        for hint in SupplementHint.allHints {
+            if lowercased.contains(hint.trigger.lowercased()) {
+                candidates.append(hint)
             }
         }
 
         return candidates.sorted { $0.priority < $1.priority }.first
     }
 
-    static func getHints(for vitaminNames: [String]) -> [SupplementInteraction] {
-        var results: [SupplementInteraction] = []
+    static func getHints(for vitaminNames: [String]) -> [SupplementHint] {
+        var results: [SupplementHint] = []
         var seen = Set<String>()
 
         for name in vitaminNames {

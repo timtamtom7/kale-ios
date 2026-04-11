@@ -15,7 +15,7 @@ struct TodayView: View {
     @State private var lowStockVitamins: [Vitamin] = []
     @State private var showingLowStock = false
     @State private var lowStockDetectionFailed = false
-    @State private var activeHint: SupplementInteraction?
+    @State private var activeHint: SupplementHint?
     @State private var shownHintIds: Set<String> = []
     @State private var showingFamilyView = false
 

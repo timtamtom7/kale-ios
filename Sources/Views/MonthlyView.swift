@@ -43,6 +43,7 @@ struct MonthlyView: View {
                         Image(systemName: "chevron.left")
                             .foregroundColor(.accentGreen)
                     }
+                    .accessibilityLabel("Previous month")
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
@@ -51,6 +52,7 @@ struct MonthlyView: View {
                         Image(systemName: "chevron.right")
                             .foregroundColor(.accentGreen)
                     }
+                    .accessibilityLabel("Next month")
                 }
             }
             .onAppear {
@@ -224,6 +226,22 @@ struct DayCell: View {
         return formatter.string(from: date)
     }
 
+    private var dayAccessibilityLabel: String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        let dateString = formatter.string(from: date)
+        let statusString: String = {
+            if isFuture { return "future date" }
+            switch status {
+            case .empty: return "no vitamins tracked"
+            case .none: return "no vitamins taken"
+            case .partial: return "some vitamins taken"
+            case .complete: return "all vitamins taken"
+            }
+        }()
+        return "\(dateString), \(statusString)"
+    }
+
     var body: some View {
         ZStack {
             if isToday {
@@ -241,6 +259,7 @@ struct DayCell: View {
                 .foregroundColor(textColor)
         }
         .frame(width: 36, height: 36)
+        .accessibilityLabel(dayAccessibilityLabel)
     }
 
     private var backgroundColor: Color {

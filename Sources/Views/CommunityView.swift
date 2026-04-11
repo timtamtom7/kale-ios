@@ -39,6 +39,7 @@ struct CommunityView: View {
                             .font(.system(size: 16))
                             .foregroundColor(.accentGreen)
                     }
+                    .accessibilityLabel("Share your routine")
                 }
             }
             .searchable(text: $searchText, prompt: "Search routines...")

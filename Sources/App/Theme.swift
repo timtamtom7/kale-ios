@@ -137,6 +137,8 @@ struct KaleButtonStyle: ButtonStyle {
         case destructive
     }
     
+    @Environment(\.accessibilityReduceMotion) var reduceMotion
+
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding(.horizontal, Theme.Spacing.lg)
@@ -147,7 +149,7 @@ struct KaleButtonStyle: ButtonStyle {
             )
             .opacity(configuration.isPressed ? 0.8 : 1.0)
             .scaleEffect(configuration.isPressed ? 0.97 : 1.0)
-            .animation(.easeInOut(duration: 0.15), value: configuration.isPressed)
+            .animation(reduceMotion ? .none : .easeInOut(duration: 0.15), value: configuration.isPressed)
     }
     
     private var backgroundColor: Color {

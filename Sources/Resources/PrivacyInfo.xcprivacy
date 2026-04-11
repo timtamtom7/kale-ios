@@ -33,5 +33,13 @@
     <array/>
     <key>NSPrivacyTracking</key>
     <false/>
+    <key>NSCameraUsageDescription</key>
+    <string>Kale uses your camera to scan supplement barcodes for quick setup.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Kale uses your location to remind you to take supplements when you arrive at specific places.</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>Kale syncs your supplement reminders to your calendar.</string>
+    <key>NSUserNotificationsUsageDescription</key>
+    <string>Kale sends reminders to help you take your supplements on time.</string>
 </dict>
 </plist>

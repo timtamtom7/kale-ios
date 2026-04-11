@@ -16,7 +16,6 @@ final class CalendarService: ObservableObject {
 
     private let eventStore = EKEventStore()
     private let calendarIdentifierKey = "kale_calendar_identifier"
-    private let reminderEventTitleKey = "kale_reminder_event_title"
 
     private init() {
         loadSettings()

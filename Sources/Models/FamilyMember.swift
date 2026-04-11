@@ -12,14 +12,14 @@ struct FamilyMember: Identifiable, Codable, Equatable {
     var currentStreakStart: Date?
     var joinedAt: Date
 
-    init(id: UUID = UUID(), name: String, emoji: String, consistencyScore: Double = 0, streak: Int = 0, isCurrentUser: Bool = false, joinedAt: Date = Date()) {
+    init(id: UUID = UUID(), name: String, emoji: String, consistencyScore: Double = 0, streak: Int = 0, isCurrentUser: Bool = false, currentStreakStart: Date? = nil, joinedAt: Date = Date()) {
         self.id = id
         self.name = name
         self.emoji = emoji
         self.consistencyScore = consistencyScore
         self.streak = streak
         self.isCurrentUser = isCurrentUser
-        self.currentStreakStart = nil
+        self.currentStreakStart = currentStreakStart
         self.joinedAt = joinedAt
     }
 
